@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/SignUpLayout"
-    android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
     android:orientation="vertical"
     tools:context=".SignupActivity">
 
@@ -14,8 +14,8 @@
     <EditText
         android:id="@+id/editEmail"
         android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:text="이메일"
+        android:layout_height="60dp"
+        android:hint="이메일"
         app:layout_constraintBottom_toTopOf="@+id/editNick"
         app:layout_constraintEnd_toStartOf="@+id/checkEmail"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,9 +26,9 @@
     <Button
         android:id="@+id/checkEmail"
         android:layout_width="84dp"
-        android:layout_height="68dp"
+        android:layout_height="50dp"
         android:background="@color/main"
-        android:text="중복 확인"
+        android:text="중복확인"
         app:layout_constraintBottom_toTopOf="@+id/checkNick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -40,8 +40,8 @@
     <EditText
         android:id="@+id/editNick"
         android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:text="닉네임"
+        android:layout_height="60dp"
+        android:hint="닉네임"
         app:layout_constraintBottom_toTopOf="@+id/editPwd"
         app:layout_constraintEnd_toStartOf="@+id/checkNick"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -52,10 +52,9 @@
     <Button
         android:id="@+id/checkNick"
         android:layout_width="84dp"
-        android:layout_height="68dp"
-
+        android:layout_height="50dp"
         android:background="@color/main"
-        android:text="중복 확인"
+        android:text="중복확인"
         app:layout_constraintBottom_toTopOf="@+id/checkPwd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -67,8 +66,8 @@
     <EditText
         android:id="@+id/editPwd"
         android:layout_width="0dp"
-        android:layout_height="68dp"
-        android:text="비밀 번호"
+        android:layout_height="60dp"
+        android:hint="비밀 번호"
         app:layout_constraintBottom_toTopOf="@+id/SignUpBtn"
         app:layout_constraintEnd_toStartOf="@+id/checkPwd"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -79,9 +78,9 @@
     <Button
         android:id="@+id/checkPwd"
         android:layout_width="84dp"
-        android:layout_height="64dp"
+        android:layout_height="50dp"
         android:background="@color/main"
-        android:text="중복 확인"
+        android:text="중복확인"
         app:layout_constraintBottom_toTopOf="@+id/SignUpBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -92,7 +91,7 @@
     <Button
         android:id="@+id/SignUpBtn"
         android:layout_width="340dp"
-        android:layout_height="67dp"
+        android:layout_height="50dp"
         android:background="@drawable/check2"
         android:text="회원 가입"
         app:layout_constraintBottom_toBottomOf="parent"

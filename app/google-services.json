@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "701637430829",
+    "project_id": "mirimiter",
+    "storage_bucket": "mirimiter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:701637430829:android:d58de3d2949da57b00b2a4",
+        "android_client_info": {
+          "package_name": "com.example.mirimiter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "701637430829-sk5jk9c0plh8qh1jsl31pi13sdip6shs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz4eA5G6__wlHi7-btCCmSIcJT-B0nB7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "701637430829-sk5jk9c0plh8qh1jsl31pi13sdip6shs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
