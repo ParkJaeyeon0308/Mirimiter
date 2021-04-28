@@ -22,11 +22,12 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="0dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:hint="비밀번호"
+        android:inputType="textPassword"
         android:textColor="@color/textColor"
         app:layout_constraintBottom_toTopOf="@id/LoginBtn"
         app:layout_constraintHorizontal_bias="0.508"
@@ -56,6 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:textColor="@color/textColor"
         android:text="계정이 없으신가요? 계정 만들기"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
