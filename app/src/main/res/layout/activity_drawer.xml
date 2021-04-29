@@ -13,8 +13,8 @@
         android:id="@+id/close"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="40dp"
         android:background="#00000000"
         android:gravity="start"
@@ -25,53 +25,24 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/community_btn"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/store_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/close">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/store_btn"
         android:layout_width="200dp"
         android:layout_height="27dp"
-        android:layout_marginTop="100dp"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/club_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/community_btn">
+        app:layout_constraintTop_toBottomOf="@id/close">
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/community_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="매점"
-            android:textColor="@color/textColor"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginEnd="82dp"
             android:gravity="center"
             android:text="커뮤니티"
             android:textColor="@color/textColor"
             android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -84,10 +55,10 @@
         app:layout_constraintBottom_toTopOf="@+id/schedule_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/store_btn">
+        app:layout_constraintTop_toBottomOf="@+id/community_btn">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/club_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -110,7 +81,7 @@
         app:layout_constraintTop_toBottomOf="@+id/club_btn">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/schedule_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -132,7 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/schedule_btn">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/officeRoom_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -155,7 +126,7 @@
         app:layout_constraintTop_toBottomOf="@+id/officeRoom_btn">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/FAQ_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"

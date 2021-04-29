@@ -6,38 +6,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="30dp"
-    android:layout_marginRight="30dp"
     android:layout_marginTop="150dp"
+    android:layout_marginRight="30dp"
     android:orientation="vertical"
     tools:context=".SignupActivity">
 
-
     <EditText
         android:id="@+id/editEmail"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:hint="@string/email"
+        android:layout_width="144dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="56dp"
         android:backgroundTint="@color/textColor"
+        android:hint="이메일"
         app:layout_constraintBottom_toTopOf="@+id/editNick"
-        app:layout_constraintEnd_toStartOf="@+id/checkEmail"
-        app:layout_constraintHorizontal_bias="0.28"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/emailBack"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/emailBack"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="56dp"
+        android:text="@string/email"
+        android:textColor="@color/textColor"
+        app:layout_constraintBottom_toTopOf="@+id/editNick"
+        app:layout_constraintEnd_toStartOf="@id/checkEmail"
+        app:layout_constraintStart_toEndOf="@+id/editEmail"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/checkEmail"
         android:layout_width="84dp"
         android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
         android:background="@color/main"
         android:text="중복확인"
-        android:layout_marginLeft="20dp"
         app:layout_constraintBottom_toTopOf="@+id/checkNick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editEmail"
+        app:layout_constraintStart_toEndOf="@id/emailBack"
         app:layout_constraintTop_toTopOf="parent" />
 
 
