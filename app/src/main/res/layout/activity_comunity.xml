@@ -1,68 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/community"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/newPost_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@color/main">
-                <TextView
-                    android:id="@+id/nickname_view"
-                    android:layout_width="370dp"
-                    android:layout_height="match_parent"/>
-
-        </androidx.appcompat.widget.Toolbar>
-
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/edit_layout"
+            android:id="@+id/CardLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="319dp">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/newPost_toolbar"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:background="@color/main"
+                    app:layout_constraintBottom_toTopOf="@id/post_textview"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/post_textview"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="417dp"
+                    android:layout_height="225dp"
                     android:background="@color/editback"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"/>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/comment_layout"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignBottom="@+id/edit_layout"
-            android:background="@color/comment">
+                    app:layout_constraintBottom_toTopOf="@id/comment_edit"
+                    app:layout_constraintEnd_toStartOf="@id/comment_edit"
+                    app:layout_constraintStart_toEndOf="@id/newPost_toolbar"
+                    app:layout_constraintTop_toBottomOf="@+id/newPost_toolbar"
+                    app:layout_constraintVertical_bias="0.25" />
 
                 <EditText
                     android:id="@+id/comment_edit"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_constrainedWidth="true"
+                    android:layout_width="322dp"
+                    android:layout_height="49dp"
+                    android:background="@color/comment"
                     app:layout_constrainedHeight="true"
-                    app:layout_constraintBottom_toBottomOf="@+id/comment_btn"
-                    app:layout_constraintStart_toStartOf="parent"/>
+                    app:layout_constrainedWidth="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/comment_btn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/comment_btn"
+                    app:layout_constraintVertical_bias="0.996" />
 
                 <Button
                     android:id="@+id/comment_btn"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:background="@color/comment_btn"
                     android:text="댓글 등록"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/comment_edit" />0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
         </androidx.constraintlayout.widget.ConstraintLayout>
-</RelativeLayout>
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.cardview.widget.CardView>
