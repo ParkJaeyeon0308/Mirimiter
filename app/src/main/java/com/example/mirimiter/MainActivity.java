@@ -80,8 +80,7 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.community_text:
-//                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
-//                    startActivity(intent);
+                    Toast.makeText(MainActivity.this, "현재 페이지 입니다.", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.club_text:
                     Intent intent1 = new Intent(MainActivity.this, ClubActivity.class);

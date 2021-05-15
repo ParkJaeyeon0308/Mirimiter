@@ -40,6 +40,8 @@
             android:theme="@style/AppNewTheme"/>
         <activity android:name=".SearchActivity"
             android:theme="@style/AppNewTheme"/>
+        <activity android:name=".AccountSettingActivity"
+            android:theme="@style/AppNewTheme"/>
     </application>
 
 </manifest>

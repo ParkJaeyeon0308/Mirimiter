@@ -75,17 +75,17 @@
             android:textSize="20dp" />
     </LinearLayout>
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
         android:background="@drawable/logo2"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"/>
     <Button
         android:id="@+id/Logout_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/textColor"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/main"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"

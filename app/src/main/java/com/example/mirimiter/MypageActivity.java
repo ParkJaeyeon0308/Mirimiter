@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,8 +41,8 @@ public class MypageActivity extends AppCompatActivity {
         accountChangebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intents = new Intent(MypageActivity.this,AccountSettingActivity.class);
-                    startActivity(intents);
+                Intent intent4 = new Intent(MypageActivity.this, AccountSettingActivity.class);
+                startActivity(intent4);
             }
         });
 
@@ -129,8 +130,7 @@ public class MypageActivity extends AppCompatActivity {
                     startActivity(intent3);
                     break;
                 case R.id.Mypage_text:
-//                    Intent intent4 = new Intent(MypageActivity.this, MypageActivity.class);
-//                    startActivity(intent4);
+                    Toast.makeText(MypageActivity.this, "현재 페이지 입니다.", Toast.LENGTH_SHORT).show();
                     break;
             }
         }
