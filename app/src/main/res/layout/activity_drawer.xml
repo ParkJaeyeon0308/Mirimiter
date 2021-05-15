@@ -18,7 +18,7 @@
         android:layout_marginBottom="40dp"
         android:background="#00000000"
         android:gravity="start"
-        android:src="@drawable/menu_btn"
+        app:srcCompat="@drawable/menu_btn"
         app:layout_constraintBottom_toTopOf="@+id/community_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -52,7 +52,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="21dp"
-        app:layout_constraintBottom_toTopOf="@+id/schedule_btn"
+        app:layout_constraintBottom_toTopOf="@+id/officeRoom_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/community_btn">
@@ -71,28 +71,6 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/schedule_btn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/officeRoom_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/club_btn">
-
-        <TextView
-            android:id="@+id/schedule_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="시간표/교실"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/officeRoom_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -100,7 +78,7 @@
         app:layout_constraintBottom_toTopOf="@+id/FAQ_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_btn">
+        app:layout_constraintTop_toBottomOf="@+id/club_btn">
 
         <TextView
             android:id="@+id/officeRoom_text"
@@ -108,8 +86,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="교무실"
-            android:textColor="@color/textColor"
             android:textSize="20dp"
+            android:textColor="@color/textColor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -119,8 +97,8 @@
         android:id="@+id/FAQ_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="389dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/Mypage_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/officeRoom_btn">
@@ -131,6 +109,31 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="FAQ"
+            android:textColor="@color/textColor"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Mypage_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="389dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/officeRoom_btn"
+        app:layout_constraintVertical_bias="0.938">
+
+        <TextView
+            android:id="@+id/Mypage_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="마이페이지"
             android:textColor="@color/textColor"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"

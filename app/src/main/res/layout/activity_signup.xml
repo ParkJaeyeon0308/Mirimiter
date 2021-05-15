@@ -87,6 +87,7 @@
         android:layout_marginTop="50dp"
         android:backgroundTint="@color/textColor"
         android:hint="비밀 번호"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toStartOf="@+id/checkPwd"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

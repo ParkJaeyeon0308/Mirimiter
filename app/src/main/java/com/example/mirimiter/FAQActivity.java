@@ -1,30 +1,17 @@
 package com.example.mirimiter;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.material.navigation.NavigationView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-import org.jetbrains.annotations.NotNull;
-
-
-public class MainActivity extends AppCompatActivity {
-    private DrawerLayout drawerLayout;
+public class FAQActivity extends AppCompatActivity {private DrawerLayout drawerLayout;
     private View drawerView;
     private TextView community_menu;
     private TextView club_menu;
@@ -75,33 +62,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    View.OnClickListener click = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            switch (v.getId()){
-                case R.id.community_text:
-//                    Intent intent = new Intent(MainActivity.this, MainActivity.class);
-//                    startActivity(intent);
-                    break;
-                case R.id.club_text:
-                    Intent intent1 = new Intent(MainActivity.this, ClubActivity.class);
-                    startActivity(intent1);
-                    break;
-                case R.id.officeRoom_text:
-                    Intent intent2 = new Intent(MainActivity.this, OfficeRoomAcitivity.class);
-                    startActivity(intent2);
-                    break;
-                case R.id.FAQ_text:
-                    Intent intent3 = new Intent(MainActivity.this, FAQActivity.class);
-                    startActivity(intent3);
-                    break;
-                case R.id.Mypage_text:
-                    Intent intent4 = new Intent(MainActivity.this, MypageActivity.class);
-                    startActivity(intent4);
-                    break;
-            }
-        }
-    };
+
     DrawerLayout.DrawerListener listener = new DrawerLayout.DrawerListener() {
         @Override
         public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
@@ -122,7 +83,33 @@ public class MainActivity extends AppCompatActivity {
         public void onDrawerStateChanged(int newState) {
 
         }
-
     };
-
+    View.OnClickListener click = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()){
+                case R.id.community_text:
+                    Intent intent = new Intent(FAQActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.club_text:
+                    Intent intent1 = new Intent(FAQActivity.this, ClubActivity.class);
+                    startActivity(intent1);
+                    break;
+                case R.id.officeRoom_text:
+                    Intent intent2 = new Intent(FAQActivity.this, OfficeRoomAcitivity.class);
+                    startActivity(intent2);
+                    break;
+                case R.id.FAQ_text:
+                    Intent intent3 = new Intent(FAQActivity.this, FAQActivity.class);
+                    startActivity(intent3);
+                    break;
+                case R.id.Mypage_text:
+                    Intent intent4 = new Intent(FAQActivity.this, MypageActivity.class);
+                    startActivity(intent4);
+                    break;
+            }
+        }
+    };
 }
+

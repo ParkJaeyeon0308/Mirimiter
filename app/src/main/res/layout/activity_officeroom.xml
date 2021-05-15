@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/draw_layout">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/main">
+            <ImageButton
+                android:id="@+id/menu_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/editback"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="start"
+                app:srcCompat="@drawable/menu_btn" />
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/activity_drawer"/>
+</androidx.drawerlayout.widget.DrawerLayout>
