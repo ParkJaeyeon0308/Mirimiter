@@ -37,15 +37,29 @@
             android:layout_marginRight="30dp"
             android:layout_marginBottom="15dp"
             android:inputType="textPassword" />
-        <EditText
-            android:id="@+id/newPassCheck"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="새 비밀번호 확인"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="15dp"
-            android:inputType="textPassword" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/newPassCheck"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:hint="새 비밀번호 확인"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:inputType="textPassword" />
+                <Button
+                    android:id="@+id/pwChkBtn"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/comment"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="확인"/>
+        </LinearLayout>
         <Button
             android:id="@+id/settingDone_btn"
             android:layout_width="match_parent"
