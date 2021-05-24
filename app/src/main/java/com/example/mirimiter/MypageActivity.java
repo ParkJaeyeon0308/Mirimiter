@@ -28,6 +28,8 @@ public class MypageActivity extends AppCompatActivity {
     private TextView nickname;
     private Button colorChangebtn;
     private Button accountChangebtn;
+    private Button logout_btn;
+    private Button killAccount_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +40,6 @@ public class MypageActivity extends AppCompatActivity {
         colorChangebtn = (Button)findViewById(R.id.colorChange_btn);
         colorChangebtn.setOnClickListener(color);
         accountChangebtn = (Button)findViewById(R.id.AccountChange_btn);
-        accountChangebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent4 = new Intent(MypageActivity.this, AccountSettingActivity.class);
-                startActivity(intent4);
-            }
-        });
-
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(pageSwitch);
         club_menu = (TextView) findViewById(R.id.club_text);
@@ -57,12 +51,36 @@ public class MypageActivity extends AppCompatActivity {
         mypage_menu = (TextView) findViewById(R.id.Mypage_text);
         mypage_menu.setOnClickListener(pageSwitch);
 
+        logout_btn = findViewById(R.id.Logout_btn);
+        killAccount_btn = findViewById(R.id.killAccount_btn);
+
         drawerLayout = (DrawerLayout) findViewById(R.id.draw_layout);
         drawerView = (View) findViewById(R.id.drawer);
 
 
 
+        accountChangebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent4 = new Intent(MypageActivity.this, AccountSettingActivity.class);
+                startActivity(intent4);
+            }
+        });
 
+        logout_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //로그아웃
+            }
+        });
+        
+        killAccount_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //회원탈퇴
+            }
+        });
+        
         ImageButton open = (ImageButton) findViewById(R.id.menu_open);
         open.setOnClickListener(new View.OnClickListener() {
             @Override

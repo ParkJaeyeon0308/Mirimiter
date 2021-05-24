@@ -16,11 +16,17 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.jetbrains.annotations.NotNull;
+
 public class LoginActivity extends AppCompatActivity {
+
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,35 +40,26 @@ public class LoginActivity extends AppCompatActivity {
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseFirestore db = FirebaseFirestore.getInstance();
-                String userid = editId.getText().toString();
+                String userid = editId.getText().toString()+"@e-mirim.hs.kr";
+                Log.d("logasdfasdf : ", userid);
                 String userpw = editPw.getText().toString();
+                Log.d("logasdfasdf : ", userpw);
 
-                DocumentReference docRef = db.collection("students").document(userid);
-                docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                firebaseAuth = FirebaseAuth.getInstance();
+
+                firebaseAuth.signInWithEmailAndPassword(userid, userpw).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                        if (task.isSuccessful()) {
-                            DocumentSnapshot document = task.getResult();
-                            if (document.exists()) {
-                                if(userid.equals(document.getString("id")) && userpw.equals(document.getString("pw"))){
+                    public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
                                     Toast.makeText(getApplicationContext(), "로그인 성공:D", Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                     startActivity(intent);
-                                }else{
-                                    Toast.makeText(getApplicationContext(), "로그인 실패:D", Toast.LENGTH_LONG).show();
-                                    editId.setText("");
-                                    editPw.setText("");
-                                }
-                            } else {
-                                Toast.makeText(getApplicationContext(), "로그인 실패:D", Toast.LENGTH_LONG).show();
+                        }else{
+                            if(task.getException() != null){
+                                Toast.makeText(getApplicationContext(), "다시 입력바랍니다:D", Toast.LENGTH_LONG).show();
                                 editId.setText("");
                                 editPw.setText("");
                             }
-                        } else {
-                            Toast.makeText(getApplicationContext(), "로그인 실패:D", Toast.LENGTH_LONG).show();
-                            editId.setText("");
-                            editPw.setText("");
                         }
                     }
                 });
