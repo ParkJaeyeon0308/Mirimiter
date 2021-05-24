@@ -13,6 +13,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
 
 import petrov.kristiyan.colorpicker.ColorPicker;
@@ -30,6 +37,8 @@ public class MypageActivity extends AppCompatActivity {
     private Button accountChangebtn;
     private Button logout_btn;
     private Button killAccount_btn;
+
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +66,7 @@ public class MypageActivity extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.draw_layout);
         drawerView = (View) findViewById(R.id.drawer);
 
-
+        firebaseAuth = FirebaseAuth.getInstance();
 
         accountChangebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,14 +79,43 @@ public class MypageActivity extends AppCompatActivity {
         logout_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //로그아웃
+                firebaseAuth.signOut();
+                Intent intent = new Intent(MypageActivity.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
         
         killAccount_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //회원탈퇴
+                firebaseAuth.getCurrentUser().delete();
+
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                String email = "";
+                if(user!=null){
+                    for (UserInfo profile : user.getProviderData()) {
+                        email = profile.getEmail();
+                    }
+                }
+                String[] userid = email.split("@");
+
+                FirebaseFirestore db = FirebaseFirestore.getInstance();
+                db.collection("students").document(userid[0])
+                        .delete()
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(getApplicationContext(), "회원탈퇴 완료:D", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(MypageActivity.this, LoginActivity.class);
+                                startActivity(intent);
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(getApplicationContext(), "회원탈퇴 실패:D", Toast.LENGTH_LONG).show();
+                            }
+                        });
             }
         });
         
