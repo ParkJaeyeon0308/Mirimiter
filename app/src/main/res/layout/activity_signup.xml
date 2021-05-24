@@ -100,7 +100,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
         android:backgroundTint="@color/textColor"
-        android:hint="비밀번호 재입력"
+        android:hint="비밀번호 확인"
         android:inputType="textPassword"
         app:layout_constraintEnd_toStartOf="@+id/checkPwd"
         app:layout_constraintLeft_toLeftOf="parent"

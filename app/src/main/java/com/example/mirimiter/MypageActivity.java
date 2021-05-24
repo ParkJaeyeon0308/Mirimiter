@@ -13,6 +13,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
 
 import petrov.kristiyan.colorpicker.ColorPicker;
@@ -28,6 +35,10 @@ public class MypageActivity extends AppCompatActivity {
     private TextView nickname;
     private Button colorChangebtn;
     private Button accountChangebtn;
+    private Button logout_btn;
+    private Button killAccount_btn;
+
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +49,6 @@ public class MypageActivity extends AppCompatActivity {
         colorChangebtn = (Button)findViewById(R.id.colorChange_btn);
         colorChangebtn.setOnClickListener(color);
         accountChangebtn = (Button)findViewById(R.id.AccountChange_btn);
-        accountChangebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent4 = new Intent(MypageActivity.this, AccountSettingActivity.class);
-                startActivity(intent4);
-            }
-        });
-
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(pageSwitch);
         club_menu = (TextView) findViewById(R.id.club_text);
@@ -57,12 +60,65 @@ public class MypageActivity extends AppCompatActivity {
         mypage_menu = (TextView) findViewById(R.id.Mypage_text);
         mypage_menu.setOnClickListener(pageSwitch);
 
+        logout_btn = findViewById(R.id.Logout_btn);
+        killAccount_btn = findViewById(R.id.killAccount_btn);
+
         drawerLayout = (DrawerLayout) findViewById(R.id.draw_layout);
         drawerView = (View) findViewById(R.id.drawer);
 
+        firebaseAuth = FirebaseAuth.getInstance();
 
+        accountChangebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent4 = new Intent(MypageActivity.this, AccountSettingActivity.class);
+                startActivity(intent4);
+            }
+        });
 
+        logout_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firebaseAuth.signOut();
+                Intent intent = new Intent(MypageActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        
+        killAccount_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firebaseAuth.getCurrentUser().delete();
 
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                String email = "";
+                if(user!=null){
+                    for (UserInfo profile : user.getProviderData()) {
+                        email = profile.getEmail();
+                    }
+                }
+                String[] userid = email.split("@");
+
+                FirebaseFirestore db = FirebaseFirestore.getInstance();
+                db.collection("students").document(userid[0])
+                        .delete()
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(getApplicationContext(), "회원탈퇴 완료:D", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(MypageActivity.this, LoginActivity.class);
+                                startActivity(intent);
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(getApplicationContext(), "회원탈퇴 실패:D", Toast.LENGTH_LONG).show();
+                            }
+                        });
+            }
+        });
+        
         ImageButton open = (ImageButton) findViewById(R.id.menu_open);
         open.setOnClickListener(new View.OnClickListener() {
             @Override

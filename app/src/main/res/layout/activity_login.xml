@@ -27,7 +27,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:hint="아이디"
-        android:inputType="textPassword"
+        android:inputType="text"
         android:textColor="@color/textColor"
         app:layout_constraintBottom_toTopOf="@id/editPw"
         app:layout_constraintHorizontal_bias="0.508"
