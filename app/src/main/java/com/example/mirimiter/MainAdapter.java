@@ -77,13 +77,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
 
     public class CustoViewHolder extends RecyclerView.ViewHolder {
 
-//        protected ImageView content_img;
         protected TextView content;
         protected EditText comment;
 //12분 부터 보기
         public CustoViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
-//            this.content_img = (ImageView) itemView.findViewById(R.id.content_img);
             this.content = (TextView) itemView.findViewById(R.id.content);
             this.comment = (EditText) itemView.findViewById(R.id.comment);
         }

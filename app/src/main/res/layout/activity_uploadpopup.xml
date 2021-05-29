@@ -1,110 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/firstLayout"
-    android:layout_width="match_parent"
-    android:layout_height="450dp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="20dp"
     android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/SecondLayout"
-        android:layout_width="411dp"
-        android:layout_height="58dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageWho"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/who" />
 
         <TextView
             android:id="@+id/nickView"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:text="TextView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="익명"
             android:textColor="@color/textColor"
-            android:textSize="25dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/postUpload_btn"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.428" />
+            android:textSize="25dp" />
 
-        <Button
-            android:id="@+id/postUpload_btn"
-            android:layout_width="94dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="90dp"
-            android:layout_marginRight="200dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/check2"
-            android:text="등록"
-            app:layout_constraintBottom_toBottomOf="@id/SecondLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/nickView"
-            app:layout_constraintStart_toEndOf="@+id/nickView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.666" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
     <EditText
         android:id="@+id/writePost"
-        android:layout_width="415dp"
-        android:layout_height="250dp"
-        android:layout_marginBottom="127dp"
-        android:textColor="@color/textColor"
-        app:layout_constraintBottom_toTopOf="@id/photoGuide"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/SecondLayout" />
+        android:layout_width="fill_parent"
+        android:layout_height="230dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/textColor" />
 
-    <TextView
-        android:id="@+id/photoGuide"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="사진 첨부"
-        android:textColor="@color/textColor"
-        android:textSize="20dp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/writePost" />
+        android:orientation="horizontal">
 
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:id="@+id/thirdLayout"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="horizontal"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/photoGuide"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/photoGuide">-->
+        <Button
+            android:id="@+id/postUpload_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/comment"
+            android:layout_toLeftOf="@id/AccountChange_btn"
+            android:text="업로드"
+            android:textColor="@color/textColor"
+            android:textSize="20dp" />
 
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_toRightOf="@id/colorChange_btn"
+            android:background="@color/comment"
+            android:text="취소"
+            android:textColor="@color/textColor"
+            android:textSize="20dp" />
 
-    <Button
-        android:id="@+id/cameraBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/comment"
-        android:text="사진 촬영"
-        android:textColor="@color/textColor"
-        android:textSize="18dp"
-        android:layout_marginLeft="20dp"
-        app:layout_constraintEnd_toStartOf="@id/galleryBtn"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/photoGuide" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/galleryBtn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/comment"
-        android:text="갤러리"
-        android:textColor="@color/textColor"
-        android:textSize="18dp"
-        android:layout_marginRight="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cameraBtn"
-        app:layout_constraintTop_toBottomOf="@+id/photoGuide" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -2,6 +2,7 @@ package com.example.mirimiter;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -11,11 +12,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +29,9 @@ import com.google.android.material.navigation.NavigationView;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
+import petrov.kristiyan.colorpicker.CustomDialog;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -40,11 +47,29 @@ public class MainActivity extends AppCompatActivity {
     private MainAdapter mainAdapter;
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
+    private ImageButton plus_btn;
+
+    private AlertDialog.Builder dialogBuilder;
+    private AlertDialog dialog;
+    private TextView nickView, photoGuide;
+    private Button postUpload_btn,cancel_btn;
+    private CircleImageView imageWho;
+    private EditText writePost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        plus_btn = (ImageButton)findViewById(R.id.plus_btn);
+        plus_btn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                createNewContactDialog();
+            }
+        });
+
 
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(click);
@@ -68,7 +93,10 @@ public class MainActivity extends AppCompatActivity {
 
         mainAdapter = new MainAdapter(arrayList);
         recyclerView.setAdapter(mainAdapter);
+
+
         //추가 버튼누르면 나오게 하는 거 아직 팝업창을 만들지 않았음 23:23초
+        //https://www.youtube.com/watch?v=kNq9w1_nhL4&t=1s   참고
 
         ImageButton open = (ImageButton) findViewById(R.id.menu_open);
         open.setOnClickListener(new View.OnClickListener() {
@@ -143,4 +171,34 @@ public class MainActivity extends AppCompatActivity {
 
     };
 
+    public  void createNewContactDialog(){
+        dialogBuilder = new AlertDialog.Builder(this);
+        final View contactPopupView = getLayoutInflater().inflate(R.layout.activity_uploadpopup, null);
+        nickView = (TextView) contactPopupView.findViewById(R.id.nickView);
+        postUpload_btn = (Button) contactPopupView.findViewById(R.id.postUpload_btn);
+        imageWho = (CircleImageView) contactPopupView.findViewById(R.id.imageWho);
+        cancel_btn = (Button) contactPopupView.findViewById(R.id.cancel_btn);
+        writePost = (EditText) contactPopupView.findViewById(R.id.writePost);
+
+    dialogBuilder.setView(contactPopupView);
+    dialog = dialogBuilder.create();
+    dialog.show();
+
+    postUpload_btn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+        //여기서 리사이클러뷰로 데이터 전송!
+            CommunityData mainData = new CommunityData("헤헤", "후하하");
+            arrayList.add(mainData);
+            mainAdapter.notifyDataSetChanged();
+        }
+    });
+
+    cancel_btn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            dialog.dismiss();
+        }
+    });
+    }
 }
