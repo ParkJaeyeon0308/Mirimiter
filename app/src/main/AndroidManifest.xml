@@ -22,27 +22,37 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- <activity android:name=".LoginActivity" -->
-        <!-- android:theme="@style/AppNewTheme"/> -->
+        </activity>
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".FAQActivity"
-            android:theme="@style/AppNewTheme"/>
-        <activity android:name=".OfficeRoomAcitivity"
-            android:theme="@style/AppNewTheme"/>
-        <activity android:name=".ClubActivity"
-            android:theme="@style/AppNewTheme"/>
-        <activity android:name=".SignupActivity"
-            android:theme="@style/AppNewTheme"/>
-        <activity android:name=".MypageActivity"
-            android:theme="@style/AppNewTheme"/>
-        <activity android:name=".SearchActivity"
-            android:theme="@style/AppNewTheme"/>
-        <activity android:name=".AccountSettingActivity"
-            android:theme="@style/AppNewTheme"/>
-        <activity android:name=".PopupActivity"
-            android:theme="@android:style/Theme.Dialog"/>
+        <activity
+            android:name=".FAQActivity"
+            android:theme="@style/AppNewTheme" />
+        <activity
+            android:name=".OfficeRoomAcitivity"
+            android:theme="@style/AppNewTheme" />
+        <activity
+            android:name=".ClubActivity"
+            android:theme="@style/AppNewTheme" />
+        <activity
+            android:name=".SignupActivity"
+            android:theme="@style/AppNewTheme" />
+        <activity
+            android:name=".MypageActivity"
+            android:theme="@style/AppNewTheme" />
+        <activity
+            android:name=".SearchActivity"
+            android:theme="@style/AppNewTheme" />
+        <activity
+            android:name=".AccountSettingActivity"
+            android:theme="@style/AppNewTheme" />
+        <activity
+            android:name=".PopupActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".ChatActivity"
+            android:theme="@style/AppNewTheme" />
     </application>
 
 </manifest>
