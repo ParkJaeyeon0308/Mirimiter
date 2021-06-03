@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView officeroom_menu;
     private TextView faq_menu;
     private TextView mypage_menu;
+    private TextView chat_menu;
 
     private ArrayList<CommunityData> arrayList;
     private MainAdapter mainAdapter;
@@ -73,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(click);
+        chat_menu = (TextView) findViewById(R.id.chat_text);
+        chat_menu.setOnClickListener(click);
         club_menu = (TextView) findViewById(R.id.club_text);
         club_menu.setOnClickListener(click);
         officeroom_menu = (TextView) findViewById(R.id.officeRoom_text);
@@ -129,21 +132,25 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.community_text:
                     Toast.makeText(MainActivity.this, "현재 페이지 입니다.", Toast.LENGTH_SHORT).show();
                     break;
-                case R.id.club_text:
-                    Intent intent1 = new Intent(MainActivity.this, ClubActivity.class);
+                case R.id.chat_text:
+                    Intent intent1 = new Intent(MainActivity.this, ChatActivity.class);
                     startActivity(intent1);
                     break;
-                case R.id.officeRoom_text:
-                    Intent intent2 = new Intent(MainActivity.this, OfficeRoomAcitivity.class);
+                case R.id.club_text:
+                    Intent intent2 = new Intent(MainActivity.this, ClubActivity.class);
                     startActivity(intent2);
                     break;
-                case R.id.FAQ_text:
-                    Intent intent3 = new Intent(MainActivity.this, FAQActivity.class);
+                case R.id.officeRoom_text:
+                    Intent intent3 = new Intent(MainActivity.this, OfficeRoomAcitivity.class);
                     startActivity(intent3);
                     break;
-                case R.id.Mypage_text:
-                    Intent intent4 = new Intent(MainActivity.this, MypageActivity.class);
+                case R.id.FAQ_text:
+                    Intent intent4 = new Intent(MainActivity.this, FAQActivity.class);
                     startActivity(intent4);
+                    break;
+                case R.id.Mypage_text:
+                    Intent intent5 = new Intent(MainActivity.this, MypageActivity.class);
+                    startActivity(intent5);
                     break;
             }
         }

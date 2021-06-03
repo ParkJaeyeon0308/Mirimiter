@@ -32,11 +32,13 @@ public class MypageActivity extends AppCompatActivity {
     private TextView officeroom_menu;
     private TextView faq_menu;
     private TextView mypage_menu;
+    private TextView chat_menu;
     private TextView nickname;
     private Button colorChangebtn;
     private Button accountChangebtn;
     private Button logout_btn;
     private Button killAccount_btn;
+
 
     FirebaseAuth firebaseAuth;
 
@@ -53,6 +55,8 @@ public class MypageActivity extends AppCompatActivity {
         community_menu.setOnClickListener(pageSwitch);
         club_menu = (TextView) findViewById(R.id.club_text);
         club_menu.setOnClickListener(pageSwitch);
+        chat_menu = (TextView) findViewById(R.id.chat_text);
+        chat_menu.setOnClickListener(pageSwitch);
         officeroom_menu = (TextView) findViewById(R.id.officeRoom_text);
         officeroom_menu.setOnClickListener(pageSwitch);
         faq_menu = (TextView) findViewById(R.id.FAQ_text);
@@ -170,20 +174,24 @@ public class MypageActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.community_text:
-                    Intent intent = new Intent(MypageActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.club_text:
-                    Intent intent1 = new Intent(MypageActivity.this, ClubActivity.class);
+                    Intent intent1 = new Intent(MypageActivity.this, MypageActivity.class);
                     startActivity(intent1);
                     break;
-                case R.id.officeRoom_text:
-                    Intent intent2 = new Intent(MypageActivity.this, OfficeRoomAcitivity.class);
+                case R.id.chat_text:
+                    Intent intent2 = new Intent(MypageActivity.this, ChatActivity.class);
                     startActivity(intent2);
                     break;
-                case R.id.FAQ_text:
-                    Intent intent3 = new Intent(MypageActivity.this, FAQActivity.class);
+                case R.id.club_text:
+                    Intent intent3 = new Intent(MypageActivity.this, ClubActivity.class);
                     startActivity(intent3);
+                    break;
+                case R.id.officeRoom_text:
+                    Intent intent4 = new Intent(MypageActivity.this, OfficeRoomAcitivity.class);
+                    startActivity(intent4);
+                    break;
+                case R.id.FAQ_text:
+                    Intent intent5 = new Intent(MypageActivity.this, FAQActivity.class);
+                    startActivity(intent5);
                     break;
                 case R.id.Mypage_text:
                     Toast.makeText(MypageActivity.this, "현재 페이지 입니다.", Toast.LENGTH_SHORT).show();
