@@ -6,27 +6,32 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
         <LinearLayout
             android:id="@+id/CardLayout"
             android:layout_width="match_parent"
             android:orientation="vertical"
-            android:layout_height="350dp">
+            android:layout_height="300dp"
+            android:background="@color/white">
 
                 <LinearLayout
                     android:id="@+id/nickView"
                     android:layout_width="match_parent"
-                    android:layout_height="75dp"
+                    android:layout_height="65dp"
                     android:background="@color/main"
                     android:orientation="horizontal">
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:id="@+id/imageView2"
                             android:layout_width="80dp"
-                            android:layout_height="50dp"
+                            android:layout_height="40dp"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="10dp"
                             android:gravity="center_vertical"
                             android:src="@drawable/who" />
 
@@ -35,8 +40,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="5dp"
                             android:text="똥꾸멍"
                             android:textSize="20dp" />
 
@@ -46,49 +49,26 @@
                 <TextView
                     android:id="@+id/content"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:textColor="@color/textColor"/>
+                    android:layout_height="183dp"
+                    android:textColor="@color/textColor" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:orientation="horizontal">
 
-                        <EditText
-                            android:id="@+id/comment"
-                            android:layout_width="318dp"
-                            android:layout_height="match_parent"
-                            android:inputType="textPersonName"
-                            android:background="@color/comment"
-                            android:layout_weight="0"
-                            android:textColor="@color/textColor"/>
-
                         <Button
                             android:id="@+id/comment_btn"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:background="@color/comment_btn"
-                            android:text="Button" />
+                            android:background="@color/white"
+                            android:text="댓글달기" />
+
                 </LinearLayout>
-<!--                <LinearLayout-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                        android:orientation="vertical">-->
-<!--                        <androidx.recyclerview.widget.RecyclerView-->
-<!--                            android:id="@+id/comment_recyclerView"-->
-<!--                            android:layout_width="0dp"-->
-<!--                            android:layout_height="0dp"-->
-<!--                            android:layout_marginStart="15dp"-->
-<!--                            android:layout_marginTop="15dp"-->
-<!--                            android:layout_marginEnd="15dp"-->
-<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                            app:layout_constraintEnd_toEndOf="parent"-->
-<!--                            app:layout_constraintStart_toStartOf="parent"-->
-<!--                            app:layout_constraintTop_toBottomOf="@+id/main_toolbar" />-->
-<!--                </LinearLayout>-->
-
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@drawable/dropshadow" />
         </LinearLayout>
-
-
 </LinearLayout>

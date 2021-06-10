@@ -42,9 +42,6 @@
             android:name=".MypageActivity"
             android:theme="@style/AppNewTheme" />
         <activity
-            android:name=".SearchActivity"
-            android:theme="@style/AppNewTheme" />
-        <activity
             android:name=".AccountSettingActivity"
             android:theme="@style/AppNewTheme" />
         <activity
@@ -53,6 +50,8 @@
         <activity
             android:name=".ChatActivity"
             android:theme="@style/AppNewTheme" />
+        <activity android:name=".CommentActivity"
+            android:theme="@style/AppNewTheme"/>
     </application>
 
 </manifest>

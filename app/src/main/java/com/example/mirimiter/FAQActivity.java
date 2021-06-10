@@ -28,8 +28,6 @@ public class FAQActivity extends AppCompatActivity {private DrawerLayout drawerL
 
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(click);
-        chat_menu = (TextView) findViewById(R.id.chat_text);
-        chat_menu.setOnClickListener(click);
         club_menu = (TextView) findViewById(R.id.club_text);
         club_menu.setOnClickListener(click);
         officeroom_menu = (TextView) findViewById(R.id.officeRoom_text);
@@ -95,10 +93,6 @@ public class FAQActivity extends AppCompatActivity {private DrawerLayout drawerL
                 case R.id.community_text:
                     Intent intent1 = new Intent(FAQActivity.this, FAQActivity.class);
                     startActivity(intent1);
-                case R.id.chat_text:
-                    Intent intent2 = new Intent(FAQActivity.this, ChatActivity.class);
-                    startActivity(intent2);
-                    break;
                 case R.id.club_text:
                     Intent intent3 = new Intent(FAQActivity.this, ClubActivity.class);
                     startActivity(intent3);

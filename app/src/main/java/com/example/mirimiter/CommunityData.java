@@ -3,11 +3,11 @@ package com.example.mirimiter;
 public class CommunityData {
 //    private int content_img;
     private String content;
-    private String comment;
+    //private String comment;
 
-    public CommunityData(String content, String comment) {
+    public CommunityData(String content) {
         this.content = content;
-        this.comment = comment;
+       // this.comment = comment;
     }
 
 //    public int getContent_img() {
@@ -26,11 +26,11 @@ public class CommunityData {
         this.content = content;
     }
 
-    public String getComment() {
-        return comment;
-    }
+   // public String getComment() {
+    //    return comment;
+   // }
 
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
+   // public void setComment(String comment) {
+     //   this.comment = comment;
+   // }
 }
