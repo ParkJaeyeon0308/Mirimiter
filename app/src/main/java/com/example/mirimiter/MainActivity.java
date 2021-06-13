@@ -202,16 +202,16 @@ public class MainActivity extends AppCompatActivity {
         }
     });
     }
-    public  void viewComment(){
-        dialogBuilder = new AlertDialog.Builder(this);
-        setContentView(R.layout.activity_comunity);
-        Button comment_btn = (Button) findViewById(R.id.comment_btn);
-    comment_btn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent(MainActivity.this, CommentActivity.class);
-            startActivity(intent);
-        }
-    });
-    }
+//    public  void viewComment(){
+//        dialogBuilder = new AlertDialog.Builder(this);
+//        setContentView(R.layout.activity_comunity);
+//        Button comment_btn = (Button) findViewById(R.id.comment_btn);
+//    comment_btn.setOnClickListener(new View.OnClickListener() {
+//        @Override
+//        public void onClick(View v) {
+//            Intent intent = new Intent(MainActivity.this, CommentActivity.class);
+//            startActivity(intent);
+//        }
+//    });
+//    }
 }

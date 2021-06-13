@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,6 +15,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 public class FAQActivity extends AppCompatActivity {private DrawerLayout drawerLayout;
     private View drawerView;
+    private ImageView back_btn;
     private TextView community_menu;
     private TextView club_menu;
     private TextView officeroom_menu;
@@ -24,7 +26,16 @@ public class FAQActivity extends AppCompatActivity {private DrawerLayout drawerL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_chat);
+
+        back_btn = (ImageView)findViewById(R.id.back_btn);
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(FAQActivity.this, MainActivity.class);
+                startActivity(intent1);
+            }
+        });
 
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(click);
@@ -91,7 +102,7 @@ public class FAQActivity extends AppCompatActivity {private DrawerLayout drawerL
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.community_text:
-                    Intent intent1 = new Intent(FAQActivity.this, FAQActivity.class);
+                    Intent intent1 = new Intent(FAQActivity.this, MainActivity.class);
                     startActivity(intent1);
                 case R.id.club_text:
                     Intent intent3 = new Intent(FAQActivity.this, ClubActivity.class);
