@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView officeroom_menu;
     private TextView faq_menu;
     private TextView mypage_menu;
-    private TextView chat_menu;
 
     private ArrayList<CommunityData> arrayList;
     private MainAdapter mainAdapter;
@@ -74,8 +73,6 @@ public class MainActivity extends AppCompatActivity {
 
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(click);
-//        chat_menu = (TextView) findViewById(R.id.chat_text);
-//        chat_menu.setOnClickListener(click);
         club_menu = (TextView) findViewById(R.id.club_text);
         club_menu.setOnClickListener(click);
         officeroom_menu = (TextView) findViewById(R.id.officeRoom_text);
