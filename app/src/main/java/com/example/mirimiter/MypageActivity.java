@@ -171,7 +171,7 @@ public class MypageActivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.community_text:
-                    Intent intent1 = new Intent(MypageActivity.this, MypageActivity.class);
+                    Intent intent1 = new Intent(MypageActivity.this, MainActivity.class);
                     startActivity(intent1);
                     break;
                 case R.id.club_text:

@@ -1,17 +1,17 @@
 package com.example.mirimiter;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        try {
-            Thread.sleep(3000);
-        }catch (InterruptedException e){
+
+        try{
+            Thread.sleep(2000);
+        }catch(InterruptedException e){
             e.printStackTrace();
         }
         startActivity(new Intent(this,LoginActivity.class));

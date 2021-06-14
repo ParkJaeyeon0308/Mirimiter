@@ -14,7 +14,7 @@
         android:id="@+id/OtnameView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="name"
+        android:text="Chat"
         android:textColor="#333333"
         android:layout_toRightOf="@+id/OtcharImg"
         android:layout_marginLeft="16dp"/>
@@ -23,7 +23,7 @@
         android:id="@+id/OtmsgView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello android"
+        android:text="관련 교무실은 3층 우측에 있습니다."
         android:layout_below="@+id/OtnameView"
         android:layout_toRightOf="@id/OtcharImg"
         android:layout_marginLeft="16dp"

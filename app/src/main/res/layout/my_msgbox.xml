@@ -23,7 +23,7 @@
         android:id="@+id/MymsgView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello android"
+        android:text="교무실에 대한 질문입니다."
         android:layout_below="@+id/MynameView"
         android:layout_toLeftOf="@id/MycharImg"
         android:layout_marginRight="16dp"

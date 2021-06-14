@@ -12,17 +12,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
-        <activity
-            android:name=".LoginActivity"
+        <activity android:name=".LoginActivity"
             android:theme="@style/AppNewTheme">
-
-            <!-- android:theme="@style/SplashTheme"> -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data android:name="com.google.android.actions" android:resource="@xml/splash" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />
@@ -42,14 +40,20 @@
             android:name=".MypageActivity"
             android:theme="@style/AppNewTheme" />
         <activity
-            android:name=".SearchActivity"
-            android:theme="@style/AppNewTheme" />
-        <activity
             android:name=".AccountSettingActivity"
             android:theme="@style/AppNewTheme" />
         <activity
             android:name=".PopupActivity"
             android:theme="@android:style/Theme.Dialog" />
+<<<<<<< HEAD
+=======
+<!--        <activity-->
+<!--            android:name=".ChatActivity"-->
+<!--            android:theme="@style/AppNewTheme" />-->
+        <activity
+            android:name=".CommentActivity"
+            android:theme="@style/AppNewTheme" />
+>>>>>>> origin/master
     </application>
 
 </manifest>
