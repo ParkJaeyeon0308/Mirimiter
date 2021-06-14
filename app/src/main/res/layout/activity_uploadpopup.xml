@@ -38,9 +38,9 @@
         android:id="@+id/writePost"
         android:layout_width="fill_parent"
         android:layout_height="230dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
         android:textColor="@color/textColor" />
 
 
@@ -52,13 +52,13 @@
         <Button
             android:id="@+id/postUpload_btn"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="50dp"
-            android:layout_marginRight="2dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="2dp"
             android:layout_marginBottom="20dp"
-            android:background="@color/comment"
             android:layout_toLeftOf="@id/AccountChange_btn"
+            android:layout_weight="1"
+            android:background="@color/comment"
             android:text="업로드"
             android:textColor="@color/textColor"
             android:textSize="20dp" />
@@ -66,12 +66,12 @@
         <Button
             android:id="@+id/cancel_btn"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="50dp"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
             android:layout_toRightOf="@id/colorChange_btn"
+            android:layout_weight="1"
             android:background="@color/comment"
             android:text="취소"
             android:textColor="@color/textColor"

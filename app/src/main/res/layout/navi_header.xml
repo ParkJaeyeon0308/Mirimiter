@@ -13,8 +13,8 @@
         android:layout_marginTop="40dp"
         android:background="#00000000"
         android:gravity="start"
-        app:srcCompat="@drawable/menu_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
