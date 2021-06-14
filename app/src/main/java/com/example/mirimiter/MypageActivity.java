@@ -32,7 +32,6 @@ public class MypageActivity extends AppCompatActivity {
     private TextView officeroom_menu;
     private TextView faq_menu;
     private TextView mypage_menu;
-    private TextView chat_menu;
     private TextView nickname;
     private Button colorChangebtn;
     private Button accountChangebtn;
@@ -55,8 +54,6 @@ public class MypageActivity extends AppCompatActivity {
         community_menu.setOnClickListener(pageSwitch);
         club_menu = (TextView) findViewById(R.id.club_text);
         club_menu.setOnClickListener(pageSwitch);
-        chat_menu = (TextView) findViewById(R.id.chat_text);
-        chat_menu.setOnClickListener(pageSwitch);
         officeroom_menu = (TextView) findViewById(R.id.officeRoom_text);
         officeroom_menu.setOnClickListener(pageSwitch);
         faq_menu = (TextView) findViewById(R.id.FAQ_text);
@@ -176,10 +173,6 @@ public class MypageActivity extends AppCompatActivity {
                 case R.id.community_text:
                     Intent intent1 = new Intent(MypageActivity.this, MypageActivity.class);
                     startActivity(intent1);
-                    break;
-                case R.id.chat_text:
-                    Intent intent2 = new Intent(MypageActivity.this, ChatActivity.class);
-                    startActivity(intent2);
                     break;
                 case R.id.club_text:
                     Intent intent3 = new Intent(MypageActivity.this, ClubActivity.class);

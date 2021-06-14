@@ -1,4 +1,4 @@
- package com.example.mirimiter;
+package com.example.mirimiter;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,6 +33,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_comunity,parent,false);
         CustoViewHolder holder = new CustoViewHolder(view);
 
+
         return holder;
     }
 
@@ -39,7 +41,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
     @Override
     public void onBindViewHolder(@NonNull @NotNull MainAdapter.CustoViewHolder holder, int position) {
         holder.content.setText(arrayList.get(position).getContent());
-        holder.comment.setText(arrayList.get(position).getComment());
+//        holder.comment.setText(arrayList.get(position).getComment());
 
         holder.itemView.setTag(position);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -78,12 +80,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
     public class CustoViewHolder extends RecyclerView.ViewHolder {
 
         protected TextView content;
-        protected EditText comment;
+        //        protected EditText comment;
 //12분 부터 보기
         public CustoViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
             this.content = (TextView) itemView.findViewById(R.id.content);
-            this.comment = (EditText) itemView.findViewById(R.id.comment);
+//            this.comment = (EditText) itemView.findViewById(R.id.comment);
         }
     }
 }

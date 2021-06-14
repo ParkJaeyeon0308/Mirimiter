@@ -20,7 +20,6 @@ public class ClubActivity extends AppCompatActivity {
     private TextView officeroom_menu;
     private TextView faq_menu;
     private TextView mypage_menu;
-    private TextView chat_menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +28,6 @@ public class ClubActivity extends AppCompatActivity {
 
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(click);
-        chat_menu = (TextView) findViewById(R.id.chat_text);
-        chat_menu.setOnClickListener(click);
         club_menu = (TextView) findViewById(R.id.club_text);
         club_menu.setOnClickListener(click);
         officeroom_menu = (TextView) findViewById(R.id.officeRoom_text);
@@ -96,10 +93,6 @@ public class ClubActivity extends AppCompatActivity {
                 case R.id.community_text:
                     Intent intent1 = new Intent(ClubActivity.this, ClubActivity.class);
                     startActivity(intent1);
-                    break;
-                case R.id.chat_text:
-                    Intent intent2 = new Intent(ClubActivity.this, ChatActivity.class);
-                    startActivity(intent2);
                     break;
                 case R.id.club_text:
                     Toast.makeText(ClubActivity.this, "현재 페이지 입니다.", Toast.LENGTH_SHORT).show();

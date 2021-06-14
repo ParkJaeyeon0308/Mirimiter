@@ -50,9 +50,6 @@
         <activity
             android:name=".PopupActivity"
             android:theme="@android:style/Theme.Dialog" />
-        <activity
-            android:name=".ChatActivity"
-            android:theme="@style/AppNewTheme" />
     </application>
 
 </manifest>

@@ -74,8 +74,8 @@ public class MainActivity extends AppCompatActivity {
 
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(click);
-        chat_menu = (TextView) findViewById(R.id.chat_text);
-        chat_menu.setOnClickListener(click);
+//        chat_menu = (TextView) findViewById(R.id.chat_text);
+//        chat_menu.setOnClickListener(click);
         club_menu = (TextView) findViewById(R.id.club_text);
         club_menu.setOnClickListener(click);
         officeroom_menu = (TextView) findViewById(R.id.officeRoom_text);
@@ -131,10 +131,6 @@ public class MainActivity extends AppCompatActivity {
             switch (v.getId()){
                 case R.id.community_text:
                     Toast.makeText(MainActivity.this, "현재 페이지 입니다.", Toast.LENGTH_SHORT).show();
-                    break;
-                case R.id.chat_text:
-                    Intent intent1 = new Intent(MainActivity.this, ChatActivity.class);
-                    startActivity(intent1);
                     break;
                 case R.id.club_text:
                     Intent intent2 = new Intent(MainActivity.this, ClubActivity.class);
@@ -195,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
         //여기서 리사이클러뷰로 데이터 전송!
-            CommunityData mainData = new CommunityData("헤헤", "후하하");
+            CommunityData mainData = new CommunityData("헤헤");
             arrayList.add(mainData);
             mainAdapter.notifyDataSetChanged();
         }
