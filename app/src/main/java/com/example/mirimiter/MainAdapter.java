@@ -1,8 +1,10 @@
 package com.example.mirimiter;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +22,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
 
     private ArrayList<CommunityData> arrayList;
 
-
     public MainAdapter(ArrayList<CommunityData> arrayList) {
         this.arrayList = arrayList;
     }
@@ -32,6 +33,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
     public MainAdapter.CustoViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_comunity,parent,false);
         CustoViewHolder holder = new CustoViewHolder(view);
+//
 
 
         return holder;
@@ -47,6 +49,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(holder.content.getContext(), CommentActivity.class);
+                ContextCompat.startActivity(holder.itemView.getContext(),intent, null);
                 String curContent = holder.content.getText().toString();
                 Toast.makeText(v.getContext(), curContent, Toast.LENGTH_SHORT).show();
             }

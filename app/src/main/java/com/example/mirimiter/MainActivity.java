@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView officeroom_menu;
     private TextView faq_menu;
     private TextView mypage_menu;
+    private Button comment_btn;
 
     private ArrayList<CommunityData> arrayList;
     private MainAdapter mainAdapter;
@@ -70,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(click);
         club_menu = (TextView) findViewById(R.id.club_text);
@@ -93,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
 
         mainAdapter = new MainAdapter(arrayList);
         recyclerView.setAdapter(mainAdapter);
+
+
 
 
         //추가 버튼누르면 나오게 하는 거 아직 팝업창을 만들지 않았음 23:23초
@@ -180,11 +182,11 @@ public class MainActivity extends AppCompatActivity {
         cancel_btn = (Button) contactPopupView.findViewById(R.id.cancel_btn);
         writePost = (EditText) contactPopupView.findViewById(R.id.writePost);
 
-    dialogBuilder.setView(contactPopupView);
-    dialog = dialogBuilder.create();
-    dialog.show();
+        dialogBuilder.setView(contactPopupView);
+        dialog = dialogBuilder.create();
+        dialog.show();
 
-    postUpload_btn.setOnClickListener(new View.OnClickListener() {
+        postUpload_btn.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
         //여기서 리사이클러뷰로 데이터 전송!
@@ -192,9 +194,9 @@ public class MainActivity extends AppCompatActivity {
             arrayList.add(mainData);
             mainAdapter.notifyDataSetChanged();
         }
-    });
 
-    cancel_btn.setOnClickListener(new View.OnClickListener() {
+    });
+        cancel_btn.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             dialog.dismiss();
