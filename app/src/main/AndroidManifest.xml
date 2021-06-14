@@ -45,11 +45,6 @@
         <activity
             android:name=".PopupActivity"
             android:theme="@android:style/Theme.Dialog" />
-<<<<<<< HEAD
-=======
-<!--        <activity-->
-<!--            android:name=".ChatActivity"-->
-<!--            android:theme="@style/AppNewTheme" />-->
         <activity
             android:name=".CommentActivity"
             android:theme="@style/AppNewTheme" />
