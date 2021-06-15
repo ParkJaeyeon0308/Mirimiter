@@ -37,7 +37,7 @@ public class CommentActivity extends AppCompatActivity {
             }
         });
 
-        String now_cont = getIntent().getExtras().getString("DOC_ID");
+        String now_cont = getIntent().getExtras().getString("DOC");
 
         FirebaseFirestore.getInstance().collection("post").get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {

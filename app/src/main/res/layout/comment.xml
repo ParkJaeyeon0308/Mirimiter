@@ -18,11 +18,10 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/who"
-            android:layout_width="80dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_vertical"
             android:src="@drawable/who" />
 
@@ -31,15 +30,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:text="익명"
-            android:textSize="20dp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="60dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="15dp"

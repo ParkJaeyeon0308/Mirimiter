@@ -16,7 +16,11 @@ import android.widget.Toast;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolder> {
 
@@ -46,7 +50,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
             public void onClick(View v) {
                 Intent intent = new Intent(holder.content.getContext(), CommentActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("DOC_ID", holder.content.getText().toString());
+                bundle.putString("DOC", holder.content.getText().toString());
                 intent.putExtras(bundle);
                 ContextCompat.startActivity(holder.itemView.getContext(),intent, null);
             }
@@ -76,20 +80,11 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
     }
 
 
-    public void remove(int position){
-        try{
-            datas.remove(position);
-            notifyItemRemoved(position);
-            //새로고침 리스트 뷰를 지우고 새로고침을 해야 add, remove, modify가 잘됌
-        }catch (IndexOutOfBoundsException ex){
-            ex.printStackTrace();
-        }
-    }
-
     public class CustoViewHolder extends RecyclerView.ViewHolder {
 
         public Button comment_btn;
-        protected TextView content;
+        public TextView content;
+
         //        protected EditText comment;
 //12분 부터 보기
         public CustoViewHolder(@NonNull @NotNull View itemView) {
