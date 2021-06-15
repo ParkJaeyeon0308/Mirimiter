@@ -17,8 +17,6 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 
-import static com.example.mirimiter.MainAdapter.docID;
-
 public class CommentActivity extends AppCompatActivity {
     private ImageButton back_main;
     private TextView commuText_view;
@@ -39,13 +37,15 @@ public class CommentActivity extends AppCompatActivity {
             }
         });
 
+        String now_cont = getIntent().getExtras().getString("DOC_ID");
+
         FirebaseFirestore.getInstance().collection("post").get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                if(document.get("documentID").equals(docID)){
+                                if(document.get("contents").toString().equals(now_cont)){
                                     commuText_view.setText(document.get("contents").toString());
                                 }
                             }

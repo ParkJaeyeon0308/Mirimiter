@@ -16,6 +16,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -55,9 +57,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView officeroom_menu;
     private TextView faq_menu;
     private TextView mypage_menu;
-    private Button comment_btn;
+    private EditText search_cont;
 
-    private List<CommunityData> mdatas;
+    private List<CommunityData> mdatas, filteredList;
     private MainAdapter mAdapter;
     private RecyclerView recyclerView;
     private LinearLayoutManager linearLayoutManager;
@@ -103,11 +105,14 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.draw_layout);
         drawerView = (View) findViewById(R.id.drawer);
 
+        search_cont = findViewById(R.id.search_cont);
+
         recyclerView = (RecyclerView)findViewById(R.id.recyclerView) ;
         linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
         mdatas = new ArrayList<>();
+        filteredList = new ArrayList<>();
 
         mAdapter = new MainAdapter(mdatas);
         recyclerView.setAdapter(mAdapter);
@@ -138,6 +143,38 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        search_cont.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+                String searchText = search_cont.getText().toString();
+                searchFilter(searchText);
+
+            }
+        });
+    }
+
+    private void searchFilter(String searchText) {
+        filteredList.clear();
+
+        for (int i = 0; i < mdatas.size(); i++) {
+            if (mdatas.get(i).getContent().toLowerCase().contains(searchText.toLowerCase())) {
+                filteredList.add(mdatas.get(i));
+            }
+        }
+
+        mAdapter.filterList(filteredList);
     }
 
     @Override

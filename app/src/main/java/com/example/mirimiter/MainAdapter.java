@@ -5,6 +5,8 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +25,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
     public MainAdapter(List<CommunityData> datas) {
         this.datas = datas;
     }
-    public static String docID = "";
 
     @NonNull
     @NotNull
@@ -44,8 +45,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(holder.content.getContext(), CommentActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("DOC_ID", holder.content.getText().toString());
+                intent.putExtras(bundle);
                 ContextCompat.startActivity(holder.itemView.getContext(),intent, null);
-                docID = data.getDocumentId();
             }
         });
 
@@ -53,16 +56,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(holder.content.getContext(), CommentActivity.class);
-                ContextCompat.startActivity(holder.itemView.getContext(),intent, null);
-                docID = data.getDocumentId();
-            }
-        });
-
-        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                remove(holder.getAdapterPosition());
-                return true;
+                Bundle bundle = new Bundle();
+                bundle.putString("DOC_ID", holder.content.getText().toString());
+                intent.putExtras(bundle);
+                ContextCompat.startActivity(holder.itemView.getContext(), intent, null);
             }
         });
     }
@@ -72,6 +69,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
         //추가버튼을 누르면 하나씩 추가되는건 따로 구현하는거
         //
     }
+
+    public void  filterList(List<CommunityData> filteredList) {
+        datas = filteredList;
+        notifyDataSetChanged();
+    }
+
 
     public void remove(int position){
         try{

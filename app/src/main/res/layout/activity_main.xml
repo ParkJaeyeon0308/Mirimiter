@@ -34,20 +34,30 @@
                 android:id="@+id/menu_open"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
                 android:background="@color/editback"
                 android:gravity="start"
                 app:srcCompat="@drawable/menu_btn" />
+
+            <EditText
+                android:id="@+id/search_cont"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:hint="검색할 단어"
+                android:textColor="#000000"
+                android:textColorHint="#BFBDBD" />
 
             <ImageButton
                 android:id="@+id/plus_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="290dp"
                 android:background="@color/editback"
                 android:gravity="end"
                 app:srcCompat="@drawable/plus_icon" />
         </androidx.appcompat.widget.Toolbar>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

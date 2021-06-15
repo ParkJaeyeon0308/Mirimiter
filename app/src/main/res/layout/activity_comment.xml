@@ -68,8 +68,9 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
-            android:text="안녕하세요 신입생분들 여기에 궁금하신거 댓글 달아주시면
-                                          제가 답글 드릴게요 ! 반가워요~"
+            android:text="안녕하세요
+            \n신입생분들 여기에 궁금하신거 댓글 달아주시면 제가 답글 드릴게요!
+            \n반가워요~"
             android:textSize="20dp" />
 
         <View
