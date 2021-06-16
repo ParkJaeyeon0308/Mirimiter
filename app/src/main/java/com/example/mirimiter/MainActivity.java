@@ -111,11 +111,8 @@ public class MainActivity extends AppCompatActivity {
         linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        mdatas = new ArrayList<>();
         filteredList = new ArrayList<>();
 
-        mAdapter = new MainAdapter(mdatas);
-        recyclerView.setAdapter(mAdapter);
 
         //추가 버튼누르면 나오게 하는 거 아직 팝업창을 만들지 않았음 23:23초
         //https://www.youtube.com/watch?v=kNq9w1_nhL4&t=1s   참고
@@ -181,8 +178,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         mdatas = new ArrayList<>();
-        mStore.collection(FirebaseID.post)
-                .orderBy(FirebaseID.timestamp, Query.Direction.DESCENDING)
+        mStore.collection("post")
+                .orderBy("timestamp", Query.Direction.DESCENDING)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable @org.jetbrains.annotations.Nullable QuerySnapshot value, @Nullable @org.jetbrains.annotations.Nullable FirebaseFirestoreException error) {
@@ -190,8 +187,8 @@ public class MainActivity extends AppCompatActivity {
                             mdatas.clear();
                             for(DocumentSnapshot snap: value.getDocuments()){
                                 Map<String, Object> shot = snap.getData();
-                                String documentId = String.valueOf(shot.get(FirebaseID.documentID));
-                                String contents = String.valueOf(shot.get(FirebaseID.contents));
+                                String documentId = String.valueOf(shot.get("documentID"));
+                                String contents = String.valueOf(shot.get("contents"));
                                 CommunityData data = new CommunityData(documentId, contents);
                                 mdatas.add(data);
                             }
@@ -271,12 +268,12 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             if(mAuth.getCurrentUser() != null){
-                String postId = mStore.collection(FirebaseID.post).document().getId();
+                String postId = mStore.collection("post").document().getId();
                 Map<String, Object> data = new HashMap<>();
-                data.put(FirebaseID.documentID, mAuth.getCurrentUser().getUid());
-                data.put(FirebaseID.contents, writePost.getText().toString());
-                data.put(FirebaseID.timestamp, FieldValue.serverTimestamp());
-                mStore.collection(FirebaseID.post).document(postId).set(data, SetOptions.merge());
+                data.put("documentID", postId);
+                data.put("contents", writePost.getText().toString());
+                data.put("timestamp", FieldValue.serverTimestamp());
+                mStore.collection("post").document(postId).set(data, SetOptions.merge());
             }
 
         //여기서 리사이클러뷰로 데이터 전송!
