@@ -10,9 +10,11 @@ public class CommunityData {
     @ServerTimestamp
     private Date date;
 
+    public CommunityData() {   }
+
     public CommunityData(String documentId, String contents) {
         this.documentId = documentId;
-        this.content = content;
+        this.content = contents;
     }
 
     public String getDocumentId() {

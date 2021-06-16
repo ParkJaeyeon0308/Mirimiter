@@ -29,7 +29,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CustoVie
     @Override
     //처음 만들어지고나서 생명주기
     public CommentAdapter.CustoViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-        return new CommentAdapter.CustoViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_comment, parent,false));
+        return new CommentAdapter.CustoViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.comment, parent,false));
     }
 
     //추가될때 생명주기
@@ -37,7 +37,6 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CustoVie
     public void onBindViewHolder(@NonNull @NotNull CommentAdapter.CustoViewHolder holder, int position) {
         CommentData data = datas.get(position);
         holder.commentView.setText(data.getComment());
-
         holder.itemView.setTag(position);
     }
     @Override
@@ -45,10 +44,6 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CustoVie
         return (null!= datas ? datas.size():0);
     }
 
-    public void  filterList(List<CommentData> filteredList) {
-        datas = filteredList;
-        notifyDataSetChanged();
-    }
 
     public class CustoViewHolder extends RecyclerView.ViewHolder {
 
@@ -56,7 +51,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CustoVie
 
         public CustoViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
-            this.commentView = (TextView) itemView.findViewById(R.id.commentView);
+            this.commentView = (TextView) itemView.findViewById(R.id.writeComment);
         }
     }
 }
