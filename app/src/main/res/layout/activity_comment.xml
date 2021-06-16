@@ -40,7 +40,7 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageView2"
-            android:layout_width="80dp"
+            android:layout_width="70dp"
             android:layout_height="40dp"
             android:layout_marginTop="15dp"
             android:gravity="center_vertical"
@@ -53,7 +53,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginTop="5dp"
             android:text="익명"
-            android:textSize="20dp" />
+            android:textSize="25sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -68,10 +68,8 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="15dp"
-            android:text="안녕하세요
-            \n신입생분들 여기에 궁금하신거 댓글 달아주시면 제가 답글 드릴게요!
-            \n반가워요~"
-            android:textSize="20dp" />
+            android:text=""
+            android:textSize="25sp" />
 
         <View
             android:layout_width="match_parent"
@@ -105,7 +103,7 @@
         android:padding="4dp">
 
         <EditText
-            android:id="@+id/inputChat"
+            android:id="@+id/inputCom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -116,7 +114,7 @@
             android:padding="10dp" />
 
         <Button
-            android:id="@+id/pushMsg"
+            android:id="@+id/pushCom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"

@@ -6,21 +6,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolder> {
 
@@ -29,6 +23,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
     public MainAdapter(List<CommunityData> datas) {
         this.datas = datas;
     }
+
+    public static String docID = "";
 
     @NonNull
     @NotNull
@@ -48,9 +44,10 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                docID = data.getDocumentId();
                 Intent intent = new Intent(holder.content.getContext(), CommentActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("DOC", holder.content.getText().toString());
+                bundle.putString("DOC", docID);
                 intent.putExtras(bundle);
                 ContextCompat.startActivity(holder.itemView.getContext(),intent, null);
             }
@@ -59,11 +56,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustoViewHolde
         holder.comment_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                docID = data.getDocumentId();
                 Intent intent = new Intent(holder.content.getContext(), CommentActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("DOC_ID", holder.content.getText().toString());
+                bundle.putString("DOC", docID);
                 intent.putExtras(bundle);
-                ContextCompat.startActivity(holder.itemView.getContext(), intent, null);
+                ContextCompat.startActivity(holder.itemView.getContext(),intent, null);
             }
         });
     }
