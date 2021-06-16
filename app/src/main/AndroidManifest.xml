@@ -48,7 +48,6 @@
         <activity
             android:name=".CommentActivity"
             android:theme="@style/AppNewTheme" />
->>>>>>> origin/master
     </application>
 
 </manifest>

@@ -44,6 +44,7 @@
         android:dividerHeight="0dp" />
 
     <LinearLayout
+        android:id="@+id/open_menu_go"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/comment"
