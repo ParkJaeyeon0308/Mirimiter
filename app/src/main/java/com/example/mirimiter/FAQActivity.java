@@ -3,6 +3,8 @@ package com.example.mirimiter;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -23,6 +25,12 @@ public class FAQActivity extends AppCompatActivity {
                 startActivity(intent1);
             }
         });
-
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        super.onCreateOptionsMenu(menu);
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.chatmenu, menu);
+        return true;
     }
 }
