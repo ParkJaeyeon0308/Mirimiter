@@ -18,10 +18,10 @@
         android:layout_marginBottom="40dp"
         android:background="#00000000"
         android:gravity="start"
-        app:srcCompat="@drawable/menu_btn"
         app:layout_constraintBottom_toTopOf="@+id/community_btn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_btn" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/community_btn"
@@ -87,8 +87,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="교무실"
-            android:textSize="20dp"
             android:textColor="@color/textColor"
+            android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

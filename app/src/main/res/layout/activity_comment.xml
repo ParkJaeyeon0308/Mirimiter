@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Top"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/Top"
     android:orientation="vertical">
 
     <LinearLayout
@@ -16,26 +16,28 @@
             android:id="@+id/back_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/back"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="15dp"
-            android:background="@color/main"/>
+            android:layout_marginTop="15dp"
+            android:background="@color/main"
+            android:src="@drawable/back" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
             android:layout_marginTop="10dp"
             android:gravity="clip_horizontal|center|center_horizontal"
-            android:layout_marginLeft="80dp"
             android:text="MIRIMITER"
             android:textColor="@color/comment_btn"
             android:textSize="30dp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imageView2"
             android:layout_width="80dp"
@@ -53,36 +55,42 @@
             android:text="익명"
             android:textSize="20dp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-    <TextView
-        android:id="@+id/commuText_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:textSize="20dp"
-        android:layout_marginBottom="15dp"
-        android:text="안녕하세요 신입생분들 여기에 궁금하신거 댓글 달아주시면
-                                          제가 답글 드릴게요 ! 반가워요~"/>
+
+        <TextView
+            android:id="@+id/commuText_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="안녕하세요
+            \n신입생분들 여기에 궁금하신거 댓글 달아주시면 제가 답글 드릴게요!
+            \n반가워요~"
+            android:textSize="20dp" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="4dp"
             android:background="@drawable/dropshadow" />
     </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comment_recyc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:dividerHeight="0dp"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp">
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_weight="1"
+        android:dividerHeight="0dp">
 
     </androidx.recyclerview.widget.RecyclerView>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="3dp"
@@ -91,28 +99,29 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="4dp"
         android:background="@color/white"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
         <EditText
             android:id="@+id/inputChat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@color/white"
             android:hint="댓글"
             android:inputType="textMultiLine"
-            android:padding="10dp"
             android:maxLines="3"
-            android:background="@color/white"/>
+            android:padding="10dp" />
+
         <Button
             android:id="@+id/pushMsg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="댓글달기"
-            android:backgroundTint="@color/white"
             android:layout_marginLeft="8dp"
-            android:onClick="clickSend"/>
+            android:backgroundTint="@color/white"
+            android:text="댓글달기" />
     </LinearLayout>
 
 

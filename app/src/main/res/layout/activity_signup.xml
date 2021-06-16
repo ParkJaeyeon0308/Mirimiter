@@ -94,6 +94,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkCer" />
+
     <EditText
         android:id="@+id/editPwd2"
         android:layout_width="0dp"

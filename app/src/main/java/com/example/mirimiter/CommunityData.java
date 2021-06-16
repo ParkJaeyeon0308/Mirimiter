@@ -1,22 +1,27 @@
 package com.example.mirimiter;
 
-public class CommunityData {
-    //    private int content_img;
-    private String content;
-    //private String comment;
+import com.google.firebase.firestore.ServerTimestamp;
 
-    public CommunityData(String content) {
+import java.util.Date;
+
+public class CommunityData {
+    private String documentId;
+    private String content;
+    @ServerTimestamp
+    private Date date;
+
+    public CommunityData(String documentId, String contents) {
+        this.documentId = documentId;
         this.content = content;
-        // this.comment = comment;
     }
 
-//    public int getContent_img() {
-//        return content_img;
-//    }
+    public String getDocumentId() {
+        return documentId;
+    }
 
-//    public void setContent_img(int content_img) {
-//        this.content_img = content_img;
-//    }
+    public void setDocumentId(String documentId) {
+        this.documentId = documentId;
+    }
 
     public String getContent() {
         return content;
@@ -26,11 +31,13 @@ public class CommunityData {
         this.content = content;
     }
 
-    // public String getComment() {
-    //    return comment;
-    // }
+    public Date getDate() {
+        return date;
+    }
 
-    // public void setComment(String comment) {
-    //   this.comment = comment;
-    // }
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+
 }

@@ -41,9 +41,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String userid = editId.getText().toString()+"@e-mirim.hs.kr";
-                Log.d("logasdfasdf : ", userid);
                 String userpw = editPw.getText().toString();
-                Log.d("logasdfasdf : ", userpw);
 
                 firebaseAuth = FirebaseAuth.getInstance();
 
@@ -51,9 +49,9 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
-                                    Toast.makeText(getApplicationContext(), "로그인 성공:D", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                    startActivity(intent);
+                            Toast.makeText(getApplicationContext(), "로그인 성공:D", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            startActivity(intent);
                         }else{
                             if(task.getException() != null){
                                 Toast.makeText(getApplicationContext(), "다시 입력바랍니다:D", Toast.LENGTH_LONG).show();
