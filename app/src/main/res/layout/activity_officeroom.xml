@@ -28,6 +28,8 @@
                 android:gravity="start"
                 app:srcCompat="@drawable/menu_btn" />
         </LinearLayout>
+
+
     </LinearLayout>
 
     <include layout="@layout/activity_drawer" />
