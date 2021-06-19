@@ -6,8 +6,7 @@
         android:start="10dp"
         android:bottom="10dp">
     </item>
-    <shape android:shape="reactangle">
-        <stroke android:width="10dp"
+    <shape android:shape="rectangle">
             android:color="@color/white"/>
         <solid android:color="@color/white"/>
     </shape>

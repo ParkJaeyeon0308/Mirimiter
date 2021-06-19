@@ -45,8 +45,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="130dp"
-        android:orientation="vertical"
-        android:background="@drawable/boarder_layout">
+        android:orientation="vertical">
+<!--        android:background="@drawable/boarder_layout"-->
         //테두리 둥글게가 적용이 안되네..일단 보류
 
         <androidx.cardview.widget.CardView
