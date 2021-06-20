@@ -73,7 +73,16 @@ public class FAQActivity extends AppCompatActivity {
         chat3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                otherMSGAdapter.addOtherMSG(new OtherMSG("★실습실 위치★\nNCS응용1~5실은 본관 3층"));
+                otherMSGAdapter.addOtherMSG(new OtherMSG("★특별실 위치★\n신관\n" +
+                        "1층 학생쉼터(학생회실) / 컨설팅룸 / 아트스튜디오 / 음악감상실\n" +
+                        "2층 CO-WORKING SPACE / 가사실습실\n" +
+                        "3층 영어카페 / 예절교육실\n" +
+                        "\n" +
+                        "본관\n" +
+                        "1층 도서관\n" +
+                        "2층 수학교실 / 영어교실 / 과학실 / 진로체험실(보건교육실) / 상담실\n" +
+                        "3층 NCS응용프로그래밍개발실습실01~05 / APP세미나실 / 소프트웨어허브실 / Business Center(교내기업실) / 방송실\n" +
+                        "4층 NCS응용프로그래밍개발실습실06 / 광고콘텐츠제작실습실01 / NCS스마트문화앱콘텐츠제작실습실01 / 무한상상Cafe"));
                 listView.setAdapter(otherMSGAdapter);
                 listView.setSelection(otherMSGAdapter.getCount() - 1);
             }
@@ -82,7 +91,9 @@ public class FAQActivity extends AppCompatActivity {
         chat4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                otherMSGAdapter.addOtherMSG(new OtherMSG("★교무실 위치★\n1교무실부터 4교무실까지!\n" +
+                otherMSGAdapter.addOtherMSG(new OtherMSG("★교무실 위치★\n본관\n" +
+                        "2층 교장실 / 교사연구실1~3 / 여교사휴게실 / 남교사휴게실 / 행정실 / 보건실\n" +
+                        "3층 교사연구실4~5(취업지원센터) / 소프트웨어지원센터(조교실)\n" +
                         "  -> 자세한 사항은 교무실 메뉴 방문!"));
                 listView.setAdapter(otherMSGAdapter);
                 listView.setSelection(otherMSGAdapter.getCount() - 1);
