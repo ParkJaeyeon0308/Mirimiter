@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,11 +22,24 @@ public class OfficeRoomAcitivity extends AppCompatActivity {
     private TextView officeroom_menu;
     private TextView faq_menu;
     private TextView mypage_menu;
+    private ViewFlipper v_flippr;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_officeroom);
+
+        int images[] = {
+                R.drawable.office1,
+                R.drawable.office2,
+                R.drawable.office3,
+        };
+
+        v_flippr = findViewById(R.id.image_slide);
+
+        for(int image : images){
+            fllipperImages(image);
+        }
 
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(click);
@@ -64,6 +79,18 @@ public class OfficeRoomAcitivity extends AppCompatActivity {
             }
         });
     }
+    public void fllipperImages(int image){
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+
+        v_flippr.addView(imageView);      // 이미지 추가
+        v_flippr.setFlipInterval(4000);       // 자동 이미지 슬라이드 딜레이시간(1000 당 1초)
+        v_flippr.setAutoStart(true);          // 자동 시작 유무 설정
+
+        // animation
+        v_flippr.setInAnimation(this,android.R.anim.slide_in_left);
+        v_flippr.setOutAnimation(this,android.R.anim.slide_out_right);
+    }
 
     DrawerLayout.DrawerListener listener = new DrawerLayout.DrawerListener() {
         @Override
@@ -91,7 +118,7 @@ public class OfficeRoomAcitivity extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()){
                 case R.id.community_text:
-                    Intent intent1 = new Intent(OfficeRoomAcitivity.this, OfficeRoomAcitivity.class);
+                    Intent intent1 = new Intent(OfficeRoomAcitivity.this, MainActivity.class);
                     startActivity(intent1);
                     break;
                 case R.id.club_text:

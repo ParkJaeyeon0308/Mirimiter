@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/club_name_omop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="OMOP"
+            android:textColor="@color/textColor"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/club_text_omop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:layout_marginBottom="15dp"
+            android:text="한달에 한번씩 프로젝트를 하고 동아리 부원들 앞에서 발표를 하여 전공실력과 발표실력을 동시에 키울 수 있는 동아리 입니다"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="190dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/club_teacher_omop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:layout_marginBottom="15dp"
+            android:text="담당 선생님 : 이호연 선생님"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

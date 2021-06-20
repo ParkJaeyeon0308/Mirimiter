@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/club_name_js"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="JS STUDY"
+            android:textColor="@color/textColor"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/club_text_js"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:layout_marginBottom="15dp"
+            android:text="Front-End의 탄탄한 기본, JavaScript를 함께 공부하며 프로젝트를 진행하는 동아리입니다."/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="180dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/club_teacher_js"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:layout_marginBottom="15dp"
+            android:text="담당 선생님 : 백현정 선생님"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

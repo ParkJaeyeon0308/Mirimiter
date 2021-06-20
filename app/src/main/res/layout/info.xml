@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/comment">
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/textColor"
+            android:textSize="30dp"
+            android:text="INFO"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:textColor="@color/textColor"
+        android:text="미리미터에게"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:gravity="center"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:textColor="@color/textColor"
+        android:text="동아리 소개글을"/>
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:gravity="center"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:textColor="@color/textColor"
+        android:text="보내주세요!"/>
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:gravity="center"
+        android:layout_marginLeft="21dp"
+        android:layout_marginRight="21dp"
+        android:textColor="@color/textColor"
+        android:layout_marginBottom="20dp"
+        android:text="s2019w10@e-mirim.hs.kr"/>
+
+</LinearLayout>
+<!--    동아리 소개글을 보내주세요!-->

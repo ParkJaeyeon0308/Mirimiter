@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/club_name_cpu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="CPU"
+            android:textColor="@color/textColor"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/club_text_cpu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:layout_marginBottom="15dp"
+            android:text="C언어를 정복할 수 있는 유일한 동아리!! 들어오면 무조건 IT쇼 참가 1000% 보장! 그로 인해 내실력은 폭풍성장! C언어 뿐만 아니라 다양한 언어, 공모전, 과제등으로 내 개발실력은 이미 카카오 개발자!"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="270dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/club_teacher_cpu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/textColor"
+            android:layout_marginBottom="15dp"
+            android:text="담당 선생님 : 민주리 선생님"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
