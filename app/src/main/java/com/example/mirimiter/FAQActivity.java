@@ -6,37 +6,116 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.PopupMenu;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 public class FAQActivity extends AppCompatActivity {
+    ListView listView;
+    OtherMSGAdapter otherMSGAdapter;
+
     private ImageView back_btn;
-    private EditText inputchat;
-    private CardView chat1;
-    private CardView chat2;
-    private CardView chat3;
-    private CardView chat4;
-    private CardView chat5;
+    private Button chat1;
+    private Button chat2;
+    private Button chat3;
+    private Button chat4;
+    private Button chat5;
+    private Button chat6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        //화면 시작때 키패드 나오지 않게
-        inputchat = (EditText) findViewById(R.id.inputChat);
-        inputchat.setInputType(0);
+        listView = findViewById(R.id.chat_listview);
+        otherMSGAdapter = new OtherMSGAdapter();
+
+        listView.setTranscriptMode(ListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
 
         //만들어둔 챗봇 선택지 정의해놨음! 사용하셈
-        chat1 = (CardView) findViewById(R.id.chat1);
-        chat2 = (CardView) findViewById(R.id.chat2);
-        chat3 = (CardView) findViewById(R.id.chat3);
-        chat4 = (CardView) findViewById(R.id.chat4);
-        chat5 = (CardView) findViewById(R.id.chat5);
+        chat1 = (Button) findViewById(R.id.chat1);
+        chat2 = (Button) findViewById(R.id.chat2);
+        chat3 = (Button) findViewById(R.id.chat3);
+        chat4 = (Button) findViewById(R.id.chat4);
+        chat5 = (Button) findViewById(R.id.chat5);
+        chat6 = (Button) findViewById(R.id.chat6);
+
+        chat1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                otherMSGAdapter.addOtherMSG(new OtherMSG("★학교 행사★\n5월    과학탐구대회 / 창업아이템 경진대회 / 비즈쿨 마켓 / 체육대회\n" +
+                        "7월    비즈쿨 경제글쓰기대회 / 창의아이디어경진대회 교내 예선 / 선도부 조직 / 정부회장 선거\n" +
+                        "8월    학생회 조직\n" +
+                        "10월  S/W경진대회 / CA발표회"));
+                listView.setAdapter(otherMSGAdapter);
+                listView.setSelection(otherMSGAdapter.getCount() - 1);
+            }
+        });
+
+        chat2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                otherMSGAdapter.addOtherMSG(new OtherMSG("★동아리★\n수요일 석식 후에 실시하는 선택적 전공동아리\n" +
+                        "  -> 자세한 사항은 동아리 메뉴 방문!\n" +
+                        "수요일 6,7교시에 실시하는 필수적 일반동아리(CA)"));
+                listView.setAdapter(otherMSGAdapter);
+                listView.setSelection(otherMSGAdapter.getCount() - 1);
+            }
+        });
+
+        chat3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                otherMSGAdapter.addOtherMSG(new OtherMSG("★실습실 위치★\nNCS응용1~5실은 본관 3층"));
+                listView.setAdapter(otherMSGAdapter);
+                listView.setSelection(otherMSGAdapter.getCount() - 1);
+            }
+        });
+
+        chat4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                otherMSGAdapter.addOtherMSG(new OtherMSG("★교무실 위치★\n1교무실부터 4교무실까지!\n" +
+                        "  -> 자세한 사항은 교무실 메뉴 방문!"));
+                listView.setAdapter(otherMSGAdapter);
+                listView.setSelection(otherMSGAdapter.getCount() - 1);
+            }
+        });
+
+        chat5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                otherMSGAdapter.addOtherMSG(new OtherMSG("★글로벌 현장학습★\n1학년 교육부 ASEAN 교육협력 사업 및 교육청 맞춤형국제화교육사업(태국)\n" +
+                        "2학년 글로벌 인턴십(학교 주관)(일본)\n" +
+                        "3학년 교육부 글로벌 현장학습(사업단 선정시 추진)(영국)"));
+                listView.setAdapter(otherMSGAdapter);
+                listView.setSelection(otherMSGAdapter.getCount() - 1);
+            }
+        });
+
+
+        chat6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                otherMSGAdapter.addOtherMSG(new OtherMSG("★와이파이 IP★\nIP주소 : 10.96.12A.B\n" +
+                        "  A : 현재 자신의 학년\n" +
+                        "  B : 부여받은 번호(홀수 : 컴퓨터, 짝수 : 핸드폰)\n" +
+                        "서브넷 마스크 : 255.255.248.0\n" +
+                        "기본 게이트웨이 : 10.96.120.254\n" +
+                        "기본 설정 DNS 서버 : 168.126.63.1\n" +
+                        "보조 DNS 서버 : 8.8.8.8"));
+                listView.setAdapter(otherMSGAdapter);
+                listView.setSelection(otherMSGAdapter.getCount() - 1);
+            }
+        });
+
 
         //뒤로가기
         back_btn = (ImageView) findViewById(R.id.back_btn);
