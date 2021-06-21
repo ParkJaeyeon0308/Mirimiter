@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="20dp"
+    android:background="@drawable/round"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/round1">
+
+        <TextView
+            android:id="@+id/office2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/textColor"
+            android:textSize="24dp"
+            android:text="2 교무실"/>
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/o2t1"
+            android:textSize="17dp"
+            android:gravity="center"
+            android:text="박향규 선생님  김명준 선생님  정혜선 선생님"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/textColor"/>
+        <TextView
+            android:id="@+id/o2t2"
+            android:textSize="17dp"
+            android:text="이은주 선생님  이정임 선생님  최규정 선생님"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/textColor"/>
+        <TextView
+            android:id="@+id/o2t3"
+            android:textSize="17dp"
+            android:text="김보경 선생님  고낙은 선생님  이하얀 선생님"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/textColor"/>
+        <TextView
+            android:id="@+id/o2t4"
+            android:textSize="17dp"
+            android:text="김가현 선생님"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:textColor="@color/textColor"/>
+
+    </TableLayout>
+
+
+</LinearLayout>
+    <!--    동아리 소개글을 보내주세요!-->

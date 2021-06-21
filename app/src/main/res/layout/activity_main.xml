@@ -44,7 +44,7 @@
                 android:id="@+id/search_cont"
                 android:layout_width="210dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="43dp"
+                android:layout_marginRight="55dp"
                 android:hint="검색할 단어"
                 android:textColor="#000000"
                 android:textColorHint="#BFBDBD" />

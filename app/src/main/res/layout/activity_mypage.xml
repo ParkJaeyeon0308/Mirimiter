@@ -53,24 +53,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/colorChange_btn"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginRight="2dp"
-                android:layout_toLeftOf="@id/AccountChange_btn"
-                android:layout_weight="1"
-                android:background="@color/comment"
-                android:text="상징 컬러 변경"
-                android:textColor="@color/textColor"
-                android:textSize="20dp" />
 
             <Button
                 android:id="@+id/AccountChange_btn"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="2dp"
-                android:layout_toRightOf="@id/colorChange_btn"
                 android:layout_weight="1"
                 android:background="@color/comment"
                 android:text="비밀번호 변경"

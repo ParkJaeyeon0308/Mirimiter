@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -259,6 +260,7 @@ public class MainActivity extends AppCompatActivity {
 
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();

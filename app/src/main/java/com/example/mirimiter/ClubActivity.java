@@ -1,6 +1,7 @@
 package com.example.mirimiter;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuInflater;
 import android.view.MotionEvent;
@@ -239,6 +240,7 @@ public class ClubActivity extends AppCompatActivity {
 
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
     }
 
@@ -251,6 +253,7 @@ public class ClubActivity extends AppCompatActivity {
 
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
     }
 
@@ -263,6 +266,7 @@ public class ClubActivity extends AppCompatActivity {
 
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
     }
 
@@ -275,6 +279,7 @@ public class ClubActivity extends AppCompatActivity {
 
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
     }
 
@@ -287,6 +292,7 @@ public class ClubActivity extends AppCompatActivity {
 
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
     }
 
@@ -299,6 +305,7 @@ public class ClubActivity extends AppCompatActivity {
 
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
     }
 
@@ -311,6 +318,7 @@ public class ClubActivity extends AppCompatActivity {
 
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
     }
 
@@ -323,6 +331,7 @@ public class ClubActivity extends AppCompatActivity {
 
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
     }
 
@@ -335,6 +344,7 @@ public class ClubActivity extends AppCompatActivity {
 
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
     }
 
@@ -347,6 +357,7 @@ public class ClubActivity extends AppCompatActivity {
 
         dialogBuilder.setView(contactPopupView);
         dialog = dialogBuilder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         dialog.show();
     }
 

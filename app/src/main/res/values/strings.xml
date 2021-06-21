@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mirimiter</string>
+    <string name="app_name">미리미터</string>
     <string name="email">@e-mirim.hs.kr</string>
     <string name="title_activity_login2">LoginActivity2</string>
     <string name="prompt_email">Email</string>

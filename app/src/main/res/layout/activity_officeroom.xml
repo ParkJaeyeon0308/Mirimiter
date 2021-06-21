@@ -53,13 +53,17 @@
             android:text="미림여자정보과학고등학교 교무실"
             android:textColor="@color/textColor"
             android:gravity="center"/>
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:id="@+id/office1_btn"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="@color/comment"
             app:cardCornerRadius="10dp"
@@ -67,122 +71,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1교무실"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
+                android:text="1교무실 2F"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:textColor="@color/textColor"
                 android:layout_marginBottom="20dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="이철호 선생님, 이호연 선생님, 우호식 선생님"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/textColor"
-                android:layout_marginBottom="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="민주리 선생님, 권지웅 선생님, 김영철 선생님"
-                android:layout_marginTop="50dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/textColor"
-                android:layout_marginBottom="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="조예진 선생님, 김지훈 선생님, 임정훈 선생님"
-                android:layout_marginTop="75dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/textColor"
-                android:layout_marginBottom="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="이철희 선생님, 최정아 선생님, 김민혜 선생님"
-                android:layout_marginTop="100dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/textColor"
-                android:layout_marginBottom="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="최영진 선생님, 이형섭 선생님"
-                android:layout_marginTop="125dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/textColor"
-                android:layout_marginBottom="5dp"/>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="10dp"
-            app:cardBackgroundColor="@color/comment"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="5dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2교무실"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:layout_marginBottom="20dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="박향규 선생님, 김명준 선생님, 정혜선 선생님"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/textColor"
-                android:layout_marginBottom="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="이은주 선생님, 이정임 선생님, 최규정 선생님"
-                android:layout_marginTop="50dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/textColor"
-                android:layout_marginBottom="5dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="김보경 선생님, 고낙은 선생님, 이하얀 선생님, 김가현 선생님"
-                android:layout_marginTop="75dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/textColor"
-                android:layout_marginBottom="5dp"/>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:id="@+id/office2_btn"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="@color/comment"
             app:cardCornerRadius="10dp"
@@ -190,20 +95,51 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3교무실"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
+                android:text="2교무실 2F"
+                android:textSize="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textColor="@color/textColor"
+                android:layout_marginBottom="20dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/office3_btn"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/comment"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3교무실 2F"
+                android:textSize="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
                 android:textColor="@color/textColor"
                 android:layout_marginBottom="20dp"/>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:id="@+id/office4_btn"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="@color/comment"
             app:cardCornerRadius="10dp"
@@ -211,20 +147,26 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4교무실"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
+                android:text="4교무실 3F"
+                android:textSize="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
                 android:textColor="@color/textColor"
                 android:layout_marginBottom="20dp"/>
         </androidx.cardview.widget.CardView>
-
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
         <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
+            android:id="@+id/office5_btn"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginBottom="10dp"
             app:cardBackgroundColor="@color/comment"
             app:cardCornerRadius="10dp"
@@ -232,14 +174,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5교무실"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
+                android:text="5교무실 3F"
+                android:textSize="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
                 android:textColor="@color/textColor"
                 android:layout_marginBottom="20dp"/>
         </androidx.cardview.widget.CardView>
+</LinearLayout>
 
+        <ImageView
+            android:layout_gravity="end"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="55dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/logo2"/>
 
     </LinearLayout>
 

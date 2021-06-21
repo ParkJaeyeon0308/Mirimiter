@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_marginBottom="20dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/round_club">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/round_club">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/round_club"
         android:orientation="vertical">
         <TextView
             android:id="@+id/club_name_pp"
@@ -26,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="15dp"
         android:orientation="vertical">
 
         <TextView
@@ -45,7 +52,8 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_club"
         android:orientation="vertical">
 
         <TextView
@@ -58,5 +66,6 @@
             android:text="담당 선생님 : 최규정 선생님"/>
 
     </LinearLayout>
+    </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+</LinearLayout>

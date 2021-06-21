@@ -244,7 +244,13 @@
                 android:textSize="23dp"/>
 
         </androidx.cardview.widget.CardView>
-
+        <ImageView
+            android:layout_gravity="end"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:src="@drawable/logo2"/>
 
     </LinearLayout>
 

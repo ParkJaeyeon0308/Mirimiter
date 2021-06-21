@@ -9,7 +9,7 @@
     android:layout_marginTop="10dp"
     android:layout_marginRight="10dp"
     android:layout_marginBottom="10dp"
-    android:background="@drawable/boarder_layout"
+    android:background="@drawable/round4"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -17,14 +17,13 @@
         android:id="@+id/CardLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/boarder_layout"
         android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/nickView"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="@color/main"
+            android:background="@drawable/round2"
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -61,13 +60,13 @@
             android:id="@+id/comment_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:text="댓글달기" />
+            android:background="@drawable/round3"
+            android:text="댓글달기"
+            />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:background="@drawable/dropshadow" />
-
+            android:background = "@drawable/round_dropshadow"/>
     </LinearLayout>
 </LinearLayout>

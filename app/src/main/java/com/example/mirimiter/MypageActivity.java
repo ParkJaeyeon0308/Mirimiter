@@ -33,7 +33,6 @@ public class MypageActivity extends AppCompatActivity {
     private TextView faq_menu;
     private TextView mypage_menu;
     private TextView nickname;
-    private Button colorChangebtn;
     private Button accountChangebtn;
     private Button logout_btn;
     private Button killAccount_btn;
@@ -47,8 +46,6 @@ public class MypageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mypage);
 
         nickname = (TextView)findViewById(R.id.nickName);
-        colorChangebtn = (Button)findViewById(R.id.colorChange_btn);
-        colorChangebtn.setOnClickListener(color);
         accountChangebtn = (Button)findViewById(R.id.AccountChange_btn);
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(pageSwitch);
@@ -193,48 +190,6 @@ public class MypageActivity extends AppCompatActivity {
         }
     };
 
-    View.OnClickListener color = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            openColorPicker();
-        }
-    };
-
-    public void openColorPicker() {
-        final ColorPicker colorPicker = new ColorPicker(this);  // ColorPicker 객체 생성
-        ArrayList<String> colors = new ArrayList<>();  // Color 넣어줄 list
-
-        colors.add("#ffab91");
-        colors.add("#F48FB1");
-        colors.add("#ce93d8");
-        colors.add("#b39ddb");
-        colors.add("#9fa8da");
-        colors.add("#90caf9");
-        colors.add("#81d4fa");
-        colors.add("#80deea");
-        colors.add("#80cbc4");
-        colors.add("#c5e1a5");
-        colors.add("#e6ee9c");
-        colors.add("#fff59d");
-        colors.add("#ffe082");
-        colors.add("#ffcc80");
-        colors.add("#bcaaa4");
-
-        colorPicker.setColors(colors)  // 만들어둔 list 적용
-                .setColumns(5)  // 5열로 설정
-                .setRoundColorButton(true)  // 원형 버튼으로 설정
-                .setOnChooseColorListener(new ColorPicker.OnChooseColorListener() {
-                    @Override
-                    public void onChooseColor(int position, int color) {
-                        nickname.setTextColor(color);  // OK 버튼 클릭 시 이벤트
-                    }
-
-                    @Override
-                    public void onCancel() {
-                        // Cancel 버튼 클릭 시 이벤트
-                    }
-                }).show();  // dialog 생성
-    }
     @Override
     public void onBackPressed() {}
 }
