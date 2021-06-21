@@ -86,6 +86,7 @@ public class ClubActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_club);
 
+
         community_menu = (TextView) findViewById(R.id.community_text);
         community_menu.setOnClickListener(click);
         club_menu = (TextView) findViewById(R.id.club_text);
@@ -255,7 +256,7 @@ public class ClubActivity extends AppCompatActivity {
 
     public void createPopupANM() {
         dialogBuilder = new AlertDialog.Builder(this);
-        final View contactPopupView = getLayoutInflater().inflate(R.layout.miven, null);
+        final View contactPopupView = getLayoutInflater().inflate(R.layout.appnme, null);
         club_name_anm = (TextView) findViewById(R.id.club_name_anm);
         club_text_anm = (TextView) findViewById(R.id.club_text_anm);
         club_teacher_anm = (TextView) findViewById(R.id.club_teacher_anm);
@@ -267,7 +268,7 @@ public class ClubActivity extends AppCompatActivity {
 
     public void createPopupPP() {
         dialogBuilder = new AlertDialog.Builder(this);
-        final View contactPopupView = getLayoutInflater().inflate(R.layout.miven, null);
+        final View contactPopupView = getLayoutInflater().inflate(R.layout.pp, null);
         club_name_pp = (TextView) findViewById(R.id.club_name_pp);
         club_text_pp = (TextView) findViewById(R.id.club_text_pp);
         club_teacher_pp = (TextView) findViewById(R.id.club_teacher_pp);
@@ -375,4 +376,6 @@ public class ClubActivity extends AppCompatActivity {
             }
         }
     };
+    @Override
+    public void onBackPressed() {}
 }

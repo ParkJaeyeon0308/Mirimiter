@@ -9,7 +9,7 @@
     android:layout_marginTop="10dp"
     android:layout_marginRight="10dp"
     android:layout_marginBottom="10dp"
-    android:background="@color/white"
+    android:background="@drawable/boarder_layout"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -17,7 +17,7 @@
         android:id="@+id/CardLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:background="@drawable/boarder_layout"
         android:orientation="vertical">
 
         <LinearLayout

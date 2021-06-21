@@ -24,6 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
                 android:background="@color/editback"
                 android:gravity="start"
                 app:srcCompat="@drawable/menu_btn" />
@@ -41,7 +42,7 @@
                 <ViewFlipper
                     android:id="@+id/image_slide"
                     android:layout_width="match_parent"
-                    android:layout_height="170dp"/>
+                    android:layout_height="230dp"/>
             </androidx.cardview.widget.CardView>
 
         <TextView

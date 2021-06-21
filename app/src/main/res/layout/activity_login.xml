@@ -5,6 +5,8 @@
     android:id="@+id/LoginLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -12,6 +14,7 @@
         android:id="@+id/imageView"
         android:layout_width="350dp"
         android:layout_height="215dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

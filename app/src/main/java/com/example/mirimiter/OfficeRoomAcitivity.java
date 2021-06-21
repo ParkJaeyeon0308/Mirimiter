@@ -33,6 +33,8 @@ public class OfficeRoomAcitivity extends AppCompatActivity {
                 R.drawable.office1,
                 R.drawable.office2,
                 R.drawable.office3,
+                R.drawable.office4,
+                R.drawable.office5
         };
 
         v_flippr = findViewById(R.id.image_slide);
@@ -139,4 +141,6 @@ public class OfficeRoomAcitivity extends AppCompatActivity {
             }
         }
     };
+    @Override
+    public void onBackPressed() {}
 }

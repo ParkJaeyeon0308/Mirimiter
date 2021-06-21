@@ -235,6 +235,7 @@ public class MypageActivity extends AppCompatActivity {
                     }
                 }).show();  // dialog 생성
     }
-
+    @Override
+    public void onBackPressed() {}
 }
 
