@@ -17,11 +17,11 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:layout_toLeftOf="@+id/MycharImg"
-        android:text="me"
+        android:text="익명"
         android:textColor="#333333" />
 
     <TextView
-        android:id="@+id/MymsgView"
+        android:id="@+id/myMSG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/MynameView"
@@ -30,18 +30,10 @@
         android:background="@drawable/back_et_mymsgbox"
         android:maxWidth="250dp"
         android:padding="12dp"
-        android:text="교무실에 대한 질문입니다."
+        android:textSize="15dp"
+        android:text="."
         android:textColor="#ffffff" />
 
-    <TextView
-        android:id="@+id/timeNow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/MymsgView"
-        android:layout_marginRight="8dp"
-        android:layout_toLeftOf="@+id/MymsgView"
-        android:text="13:35"
-        android:textSize="12sp" />
 </RelativeLayout>
 
 

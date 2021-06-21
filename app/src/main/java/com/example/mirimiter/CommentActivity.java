@@ -144,5 +144,6 @@ public class CommentActivity extends AppCompatActivity {
         }
 
         inputCom.setText("");
+        onStart();
     }
 }

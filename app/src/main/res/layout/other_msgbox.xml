@@ -16,11 +16,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@+id/OtcharImg"
-        android:text="Chat"
+        android:text="미리미터"
         android:textColor="#333333" />
 
     <TextView
-        android:id="@+id/OtmsgView"
+        android:id="@+id/otherMSG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/OtnameView"
@@ -28,18 +28,10 @@
         android:layout_toRightOf="@id/OtcharImg"
         android:background="@drawable/back_et_othermsgbox"
         android:maxWidth="250dp"
+        android:textSize="15dp"
         android:padding="12dp"
-        android:text="관련 교무실은 3층 우측에 있습니다."
+        android:text="."
         android:textColor="@color/white" />
 
-    <TextView
-        android:id="@+id/timeNow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/OtmsgView"
-        android:layout_marginLeft="8dp"
-        android:layout_toRightOf="@+id/OtmsgView"
-        android:text="13:35"
-        android:textSize="12sp" />
 </RelativeLayout>
 
